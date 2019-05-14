@@ -1,0 +1,8 @@
+D:\Workspace\DomoticaProject\DomoticaProject\DomoticaProject\bin\Debug\netstandard2.0\DomoticaProject.deps.json
+D:\Workspace\DomoticaProject\DomoticaProject\DomoticaProject\bin\Debug\netstandard2.0\DomoticaProject.dll
+D:\Workspace\DomoticaProject\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\DomoticaProject.csprojAssemblyReference.cache
+D:\Workspace\DomoticaProject\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\Workspace\DomoticaProject\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+D:\Workspace\DomoticaProject\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\DomoticaProject.csproj.CoreCompileInputs.cache
+D:\Workspace\DomoticaProject\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\DomoticaProject.AssemblyInfoInputs.cache
+D:\Workspace\DomoticaProject\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\DomoticaProject.AssemblyInfo.cs
