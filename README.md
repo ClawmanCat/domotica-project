@@ -11,7 +11,7 @@ Visual Micro may take some manual tweaking to be set up correctly. Please ensure
 - Your Controller IDE is set to "Arduino/Genuino Uno"
 - You have installed the arduino.exe executable from [arduino.cc](https://arduino.cc)
 - Your Microcontroller Application is set to "Arduino 1.6/1.8" and points to the aforementioned arduino.exe executable.
-- Your Arduino is plugged in, and selected by Visual Micro. (It will appear as "COM<Some number> - USB-SERIAL <More letters/numbers>",
+- Your Arduino is plugged in, and selected by Visual Micro. (It will appear as "COM\<Some number\> - USB-SERIAL \<More letters/numbers\>",
   assuming it's plugged in as a USB device.)
 
 The DomoticaProject.Arduino project comes with the DomoticaProject.Arduino.ino file to test if everything is set up correctly.
