@@ -107,9 +107,11 @@
     <DebuggerFlavor>VisualMicroDebugger</DebuggerFlavor>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="DomoticaProject.Arduino.ino">
+    <None Include="Arduino.cfg" />
+    <None Include="DomoticaProject.Arduino.cpp">
       <FileType>CppCode</FileType>
     </None>
+    <None Include="DomoticaProject.Arduino.ino" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="__vm\.DomoticaProject.Arduino.vsarduino.h" />
