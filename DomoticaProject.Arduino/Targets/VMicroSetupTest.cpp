@@ -10,9 +10,9 @@ void setup() {
 }
 
 void loop() {
-    PORTB = 0x00;
+    PORTB = 0xFF;
 
-    for (byte i = 0; i < (1 << 6); i++) {
+    for (byte i = (1 << 6); i >= 0; --i) {
         PORTB = i;
         delay(250);
     }

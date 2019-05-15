@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Targets">
+      <UniqueIdentifier>{0ebcc0b1-0ac4-480b-b60d-1025dd1849b0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="__vm\.DomoticaProject.Arduino.vsarduino.h">
@@ -23,5 +26,10 @@
     <None Include="DomoticaProject.Arduino.ino" />
     <None Include="Arduino.cfg" />
     <None Include="DomoticaProject.Arduino.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Targets\VMicroSetupTest.cpp">
+      <Filter>Targets</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
