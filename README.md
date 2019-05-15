@@ -16,3 +16,8 @@ Visual Micro may take some manual tweaking to be set up correctly. Please ensure
 
 The DomoticaProject.Arduino project comes with the DomoticaProject.Arduino.ino file to test if everything is set up correctly.
 If everything works correctly, this program will count from 0 to 63 using a 6-bit LED, to be plugged into ports 8 - 13.
+
+
+The Arduino Target.zip file contains a Visual Studio template for generating Arduino Targets. (Sketches)
+Installing this template is optional, but highly recommended. Install it by moving it to the Visual Studio templates folder.
+(Usually My Documents/Visual Studio \<YEAR\>/Templates)

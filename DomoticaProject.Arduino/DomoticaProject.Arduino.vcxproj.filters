@@ -21,15 +21,15 @@
     <ClInclude Include="__vm\.DomoticaProject.Arduino.vsarduino.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="IArduinoTarget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VMTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="DomoticaProject.Arduino.ino" />
-    <None Include="Arduino.cfg" />
     <None Include="DomoticaProject.Arduino.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Targets\VMicroSetupTest.cpp">
-      <Filter>Targets</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>

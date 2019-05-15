@@ -5,9 +5,3 @@
 DomoticaProject.Arduino/__vm/
 DomoticaProject.Arduino/Debug/
 DomoticaProject.Arduino/Release/
-DomoticaProject.Arduino/DomoticaProject.Arduino.cpp
-
-# VMicroCFG
-VMicroCFG/Build/
-VMicroCFG/Debug/
-VMicroCFG/Release/
