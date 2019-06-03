@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DomoticaProject.Lua.MoonSharp;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,7 +13,7 @@ namespace DomoticaProject {
         }
 
         protected override void OnStart() {
-            // Handle when your app starts
+            APIRegistry.RegisterAll();
         }
 
         protected override void OnSleep() {
