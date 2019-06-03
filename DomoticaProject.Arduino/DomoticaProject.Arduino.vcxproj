@@ -125,7 +125,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IArduinoTarget.h" />
-    <ClInclude Include="VMTest.h" />
+    <ClInclude Include="Targets\VMTest.h" />
     <ClInclude Include="__vm\.DomoticaProject.Arduino.vsarduino.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

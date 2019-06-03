@@ -6,3 +6,11 @@ D:\Workspace\DomoticaProject\DomoticaProject\DomoticaProject\obj\Debug\netstanda
 D:\Workspace\DomoticaProject\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\DomoticaProject.csproj.CoreCompileInputs.cache
 D:\Workspace\DomoticaProject\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\DomoticaProject.AssemblyInfoInputs.cache
 D:\Workspace\DomoticaProject\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\DomoticaProject.AssemblyInfo.cs
+D:\Workspace\domotica-project\DomoticaProject\DomoticaProject\bin\Debug\netstandard2.0\DomoticaProject.deps.json
+D:\Workspace\domotica-project\DomoticaProject\DomoticaProject\bin\Debug\netstandard2.0\DomoticaProject.dll
+D:\Workspace\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\DomoticaProject.csprojAssemblyReference.cache
+D:\Workspace\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\Workspace\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+D:\Workspace\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\DomoticaProject.csproj.CoreCompileInputs.cache
+D:\Workspace\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\DomoticaProject.AssemblyInfoInputs.cache
+D:\Workspace\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\DomoticaProject.AssemblyInfo.cs

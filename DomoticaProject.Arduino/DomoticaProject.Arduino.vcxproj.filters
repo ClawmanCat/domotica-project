@@ -24,7 +24,7 @@
     <ClInclude Include="IArduinoTarget.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="VMTest.h">
+    <ClInclude Include="Targets\VMTest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

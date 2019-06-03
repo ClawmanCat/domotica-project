@@ -4,13 +4,12 @@
     Class name should match file name, and implement IArduinoTarget.
 */
 
+// Insert the name of the target here:
 #define SRC VMTest
 
 
-// IntelliSense may complain the file doesn't exist.
-// IntelliSense is wrong.
 #define STRFY(x) #x
-#define INC_F(x) STRFY(x.h)
+#define INC_F(x) STRFY(Targets/x.h)
 #include INC_F(SRC)
 
 void setup() {
