@@ -8,11 +8,11 @@ using MoonSharp.Interpreter;
 namespace DomoticaProject.Lua.MoonSharp {
     static class APIRegistry {
         public static void RegisterAll() {
-            Type[] APIClasses = (Type[]) AppDomain.CurrentDomain.GetAssemblies()
+            var APIClasses = AppDomain.CurrentDomain.GetAssemblies()
                 .SelectMany(x => x.GetTypes())
                 .Where(x => typeof(ILuaAPI).IsAssignableFrom(x));
 
-            foreach (Type t in APIClasses) UserData.RegisterType(t);
+            foreach (var t in APIClasses) UserData.RegisterType(t);
         }
     }
 }
