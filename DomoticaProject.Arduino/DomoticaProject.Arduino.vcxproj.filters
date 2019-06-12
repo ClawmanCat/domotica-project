@@ -27,9 +27,20 @@
     <ClInclude Include="Targets\VMTest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Targets\SocketServer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Shared\AttachableRegistry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="DomoticaProject.Arduino.ino" />
     <None Include="DomoticaProject.Arduino.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Targets\SocketServer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

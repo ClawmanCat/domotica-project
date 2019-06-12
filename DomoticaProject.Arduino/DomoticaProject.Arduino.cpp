@@ -5,7 +5,7 @@
 */
 
 // Insert the name of the target here:
-#define SRC VMTest
+#define SRC SocketServer
 
 
 #define STRFY(x) #x
