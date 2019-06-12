@@ -852,6 +852,9 @@
     <ClInclude Include="Dependencies\boost\preprocessor\wstringize.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Server\Message.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="DomoticaProject.Arduino.ino" />
@@ -861,5 +864,8 @@
     <ClCompile Include="Targets\SocketServer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Dependencies\README.txt" />
   </ItemGroup>
 </Project>

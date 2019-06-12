@@ -1,6 +1,6 @@
 #pragma once
 
-#include <Dependencies/boost/preprocessor.hpp>
+#include "../Dependencies/boost/preprocessor.hpp"
 
 #define _MAGIC_ENUM_IMPL_FE_MACRO(Index, Data, Elem) BOOST_PP_STRINGIZE(Elem),
 

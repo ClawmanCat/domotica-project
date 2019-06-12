@@ -14,6 +14,6 @@
 #
 # /* BOOST_PP_INCLUDE_SELF */
 #
-# define BOOST_PP_INCLUDE_SELF() <Dependencies/boost/preprocessor/iteration/detail/self.hpp>
+# define BOOST_PP_INCLUDE_SELF() "Dependencies/boost/preprocessor/iteration/detail/self.hpp"
 #
 # endif

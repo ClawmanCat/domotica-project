@@ -5,3 +5,9 @@
 DomoticaProject.Arduino/__vm/
 DomoticaProject.Arduino/Debug/
 DomoticaProject.Arduino/Release/
+
+# C++ Project Outputs
+Debug/
+Release/
+ArduinoDependencyFixer/Debug/
+ArduinoDependencyFixer/Release/
