@@ -3,6 +3,7 @@
 #include "IArduinoTarget.h"
 #include "../Shared/AttachableRegistry.h"
 #include "../Shared/GlobalSerial.h"
+#include "../Server/ServerCommandHandler.h"
 
 #include <Ethernet.h>
 #include <Vector.h>
@@ -40,6 +41,11 @@ struct SocketServer : public IArduinoTarget<SocketServer> {
             GSerial.println("Received message from client: ");
             GSerial.printf("(Device: %i, Port: %i)\n", request[0], request[1]);
             GSerial.println((const char*) &request[2]);
+
+            if (request[0] == 0) {
+                // Handle as local command.
+                CommandHandler.HandleCommand(client, request[1], &request[2]);
+            }
 
             const Attachable* a = AttachableRegistry::instance().find(request[0], request[1]);
             if (a == nullptr) {
