@@ -16,50 +16,46 @@ public:
         return i;
     }
 
-    void HandleCommand(EthernetClient& src, const Message& msg) {
+    String HandleCommand(const Message& msg) {
         if (msg.device != 0 || msg.port >= NumCommands) return;
         switch ((Command) msg.port) {
             case LIST_COMMANDS:
-                HandleListCommands(src, msg);
-                break;
+                return HandleListCommands(msg);
             case PING:
-                HandlePingCommand(src, msg);
-                break;
+                return HandlePingCommand(msg);
             case LIST_DEVICES:
-                HandleListDevicesCommand(src, msg);
-                break;
+                return HandleListDevicesCommand(msg);
             case LIST_ATTACHABLES:
-                HandleListAttachablesCommand(src, msg);
-                break;
+                return HandleListAttachablesCommand(msg);
         }
     }
 private:
     ServerCommandHandler(void) = default;
 
     // TODO: Refactor server commands to seperate classes.
-    void HandleListCommands(EthernetClient& src, const Message& msg) {
+    String HandleListCommands(const Message& msg) {
         String result;
         for (byte i = 0; i < NumCommands; ++i) {
+            char intstr[5];
+            sprintf(intstr, "%03.3i ", (int) i);
+
+            result += intstr;
             result += CommandToString((Command) i);
             if (i != (NumCommands - 1)) result += '\n';
         }
         
-        src.write((byte*) msg.MessageID, sizeof(long long));
-        src.write(result.c_str());
+        return result;
     }
 
-    void HandlePingCommand(EthernetClient& src, const Message& msg) {
-        src.write((byte*) msg.MessageID, sizeof(long long));
-        src.write("Pong!");
+    String HandlePingCommand(const Message& msg) {
+        return "Pong!";
     }
 
-    void HandleListDevicesCommand(EthernetClient& src, const Message& msg) {
-        src.write((byte*) msg.MessageID, sizeof(long long));
-        src.write("This command is currently not implemented.");
+    String HandleListDevicesCommand(const Message& msg) {
+        return "This command is currently not implemented.";
     }
 
-    void HandleListAttachablesCommand(EthernetClient& src, const Message& msg) {
-        src.write((byte*) msg.MessageID, sizeof(long long));
-        src.write("This command is currently not implemented.");
+    String HandleListAttachablesCommand(const Message& msg) {
+        return "This command is currently not implemented.";
     }
 };

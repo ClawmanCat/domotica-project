@@ -3,10 +3,10 @@
 #include <Arduino.h>
 
 struct Message {
-    long long MessageID;
+    int32_t MessageID;
     byte device, port;
-    const byte* data;
+    char* data;
 
-    Message(long long MessageID, byte device, byte port, const byte* data)
+    Message(int32_t MessageID, byte device, byte port, char* data)
         : MessageID(MessageID), device(device), port(port), data(data) {}
 };

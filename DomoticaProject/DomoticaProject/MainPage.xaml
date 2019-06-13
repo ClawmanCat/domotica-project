@@ -5,10 +5,24 @@
              x:Class="DomoticaProject.MainPage">
 
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+          <ListView ItemTapped="CommandItemTapped" x:Name="CommandList">
+               <ListView.ItemTemplate>
+                    <DataTemplate>
+                         <ViewCell>
+                              <StackLayout>
+                                   <Label Text="{Binding name}" FontSize="32" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+
+                                   <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                        <Label Text="ID = "></Label>
+                                        <Label Text="{Binding id}"></Label>
+                                   </StackLayout>
+                              </StackLayout>
+                         </ViewCell>
+                    </DataTemplate>
+               </ListView.ItemTemplate>
+          </ListView>
+
+          <ListView x:Name="ResponseList"></ListView>
     </StackLayout>
 
 </ContentPage>
