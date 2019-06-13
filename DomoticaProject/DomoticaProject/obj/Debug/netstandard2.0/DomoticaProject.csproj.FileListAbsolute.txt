@@ -18,3 +18,17 @@ D:\Workspace\domotica-project\DomoticaProject\DomoticaProject\bin\Debug\netstand
 D:\Workspace\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\XamlC.stamp
 D:\Workspace\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\DomoticaProject.dll
 D:\Workspace\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\DomoticaProject.pdb
+E:\p4project\domotica-project\DomoticaProject\DomoticaProject\bin\Debug\netstandard2.0\DomoticaProject.deps.json
+E:\p4project\domotica-project\DomoticaProject\DomoticaProject\bin\Debug\netstandard2.0\DomoticaProject.dll
+E:\p4project\domotica-project\DomoticaProject\DomoticaProject\bin\Debug\netstandard2.0\DomoticaProject.pdb
+E:\p4project\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\DomoticaProject.csprojAssemblyReference.cache
+E:\p4project\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\App.xaml.g.cs
+E:\p4project\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+E:\p4project\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\DomoticaProject.csproj.CoreCompileInputs.cache
+E:\p4project\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\DomoticaProject.AssemblyInfoInputs.cache
+E:\p4project\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\DomoticaProject.AssemblyInfo.cs
+E:\p4project\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\XamlC.stamp
+E:\p4project\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\DomoticaProject.dll
+E:\p4project\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\DomoticaProject.pdb
+E:\p4project\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\Sceduler.xaml.g.cs
+E:\p4project\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\Sceduler_Selected.xaml.g.cs

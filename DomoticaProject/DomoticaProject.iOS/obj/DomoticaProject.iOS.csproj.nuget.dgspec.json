@@ -1,0 +1,131 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\p4project\\domotica-project\\DomoticaProject\\DomoticaProject.iOS\\DomoticaProject.iOS.csproj": {}
+  },
+  "projects": {
+    "E:\\p4project\\domotica-project\\DomoticaProject\\DomoticaProject.iOS\\DomoticaProject.iOS.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\p4project\\domotica-project\\DomoticaProject\\DomoticaProject.iOS\\DomoticaProject.iOS.csproj",
+        "projectName": "DomoticaProject.iOS",
+        "projectPath": "E:\\p4project\\domotica-project\\DomoticaProject\\DomoticaProject.iOS\\DomoticaProject.iOS.csproj",
+        "packagesPath": "C:\\Users\\janvl\\.nuget\\packages\\",
+        "outputPath": "E:\\p4project\\domotica-project\\DomoticaProject\\DomoticaProject.iOS\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\janvl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "xamarinios10"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "xamarinios10": {
+            "projectReferences": {
+              "E:\\p4project\\domotica-project\\DomoticaProject\\DomoticaProject\\DomoticaProject.csproj": {
+                "projectPath": "E:\\p4project\\domotica-project\\DomoticaProject\\DomoticaProject\\DomoticaProject.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "xamarinios10": {
+          "dependencies": {
+            "MoonSharp": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.0.0.482894, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "E:\\p4project\\domotica-project\\DomoticaProject\\DomoticaProject\\DomoticaProject.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\p4project\\domotica-project\\DomoticaProject\\DomoticaProject\\DomoticaProject.csproj",
+        "projectName": "DomoticaProject",
+        "projectPath": "E:\\p4project\\domotica-project\\DomoticaProject\\DomoticaProject\\DomoticaProject.csproj",
+        "packagesPath": "C:\\Users\\janvl\\.nuget\\packages\\",
+        "outputPath": "E:\\p4project\\domotica-project\\DomoticaProject\\DomoticaProject\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\janvl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "MoonSharp": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.0.0.482894, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
