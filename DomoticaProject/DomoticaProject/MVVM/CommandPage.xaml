@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DomoticaProject.MVVM.CommandPage">
+    <ContentPage.Content>
+        <StackLayout>
+               <Grid>
+                    <Grid.RowDefinitions>
+                         <RowDefinition Height="75*"></RowDefinition>
+                         <RowDefinition Height="25*"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <ScrollView Grid.Row="0" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                         <ListView x:Name="CommandList" ItemTapped="CommandTapped"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                              <ListView.ItemTemplate>
+                                   <DataTemplate>
+                                        <ViewCell>
+                                             <StackLayout Orientation="Horizontal" HeightRequest="64">
+                                                  <Label 
+                                                       FontSize="32" 
+                                                       HorizontalTextAlignment="Center" 
+                                                       VerticalTextAlignment="Center" 
+                                                       TextColor="DarkGray" 
+                                                       FontAttributes="Bold"
+                                                       Text="{Binding FormattedID}"
+                                                  ></Label>
+
+                                                  <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                                       <Label FontAttributes="Bold" Text="{Binding DisplayName}" VerticalOptions="Center"></Label>
+                                                       <Label Text="{Binding Description}" VerticalOptions="Center"></Label>
+                                                  </StackLayout>
+                                             </StackLayout>
+                                        </ViewCell>
+                                   </DataTemplate>
+                              </ListView.ItemTemplate>
+                         </ListView>
+                    </ScrollView>
+
+                    <Frame BorderColor="DarkGray" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="1" Grid.Column="0">
+                         <Label x:Name="ResponseDisplay" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Label>
+                    </Frame>
+               </Grid>
+          </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

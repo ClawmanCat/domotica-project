@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DomoticaProject.MVVM.ConnectionPage">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+               <Label Text="Enter the Arduino Server's IP address:" HorizontalOptions="Center"></Label>
+
+               <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Entry WidthRequest="220" x:Name="IPEntry"   Placeholder="IP Address"></Entry>
+                    <Label Text=":" FontSize="Large" VerticalOptions="Center"></Label>
+                    <Entry WidthRequest="70"  x:Name="PortEntry" Placeholder="Port"></Entry>
+               </StackLayout>
+
+               <Button x:Name="ConnectButton" Text="Connect" WidthRequest="128" HorizontalOptions="Center" Clicked="ConnectClicked"></Button>
+
+               <StackLayout x:Name="Status" Orientation="Horizontal" Margin="0, 25" HorizontalOptions="CenterAndExpand"></StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

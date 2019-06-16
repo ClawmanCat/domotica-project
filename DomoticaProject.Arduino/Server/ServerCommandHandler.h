@@ -1,8 +1,8 @@
 #pragma once
 
-#include "EthernetServer.h"
 #include "Message.h"
 #include "../Shared/MagicEnum.h"
+#include "../Shared/AttachableRegistry.h"
 
 #define CommandHandler ServerCommandHandler::instance()
 
@@ -56,6 +56,7 @@ private:
     }
 
     String HandleListAttachablesCommand(const Message& msg) {
-        return "This command is currently not implemented.";
+        //return AttRegistry.GetAttachableDisplayData();
+        return "";
     }
 };

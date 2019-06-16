@@ -855,6 +855,12 @@
     <ClInclude Include="Server\Message.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Targets\BinOpener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Shared\Vector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="DomoticaProject.Arduino.ino" />
@@ -862,6 +868,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Targets\SocketServer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Targets\BinOpener.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

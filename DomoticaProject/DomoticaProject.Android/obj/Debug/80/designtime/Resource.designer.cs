@@ -1461,6 +1461,12 @@ namespace DomoticaProject.Droid
 			// aapt resource value: 0x7F040002
 			public const int launcher_background = 2130968578;
 			
+			// aapt resource value: 0x7F040007
+			public const int ListViewHighlighted = 2130968583;
+			
+			// aapt resource value: 0x7F040006
+			public const int ListViewSelected = 2130968582;
+			
 			// aapt resource value: 0x7F06003B
 			public const int material_blue_grey_800 = 2131099707;
 			
@@ -4571,6 +4577,9 @@ namespace DomoticaProject.Droid
 			
 			// aapt resource value: 0x7F160004
 			public const int CardView_Light = 2132148228;
+			
+			// aapt resource value: 0x7F050005
+			public const int DarkMenu = 2131034117;
 			
 			// aapt resource value: 0x7F050002
 			public const int MainTheme = 2131034114;

@@ -1,58 +1,98 @@
 #pragma once
 
+#pragma once
+
 #include <Arduino.h>
-#include <Vector.h>
+#include <ArduinoSTL.h>
 
-struct Attachable;
+#include "../Shared/Vector.h"
+#include "../Shared/MagicEnum.h"
+#include "../Server/Message.h"
 
-typedef const char* (*OnAttachableRequest)(const char* data, const Attachable* owner);
-typedef void (*AttachableInit)(void);
+/*
+#define AttRegistry AttachableRegistry::instance()
+
+
+typedef void (*OnAttachableInit)(void);
+typedef String (*OnAttachableCall)(const Message& msg);
 
 struct Attachable {
-    // Function called when the server is initializing.
-    AttachableInit InitCallback;
-    // Function called when the server receives a request for this attachable.
-    OnAttachableRequest RequestCallback;
-    // Does calling the callback function return data? (if no, the callback should return nullptr.)
-    bool HasReturn;
-    // The name for this attachable, to be displayed in the app.
-    const char* DisplayName;
-    // Identifiers for locating the attachable.
-    byte device, port;
+    MAGIC_ENUM_CLASS(DataType, byte, NONE, TEXT, INT, FLOAT);
 
-    Attachable(AttachableInit CBInit, OnAttachableRequest CBRequest, bool returns, const char* name, byte device, byte port)
-        : InitCallback(CBInit), RequestCallback(CBRequest), HasReturn(returns), DisplayName(name), device(device), port(port) {}
+    OnAttachableInit OnInit;
+    OnAttachableCall OnCall;
+
+    char* DisplayName, *Description;
+    DataType RequestType, ReturnType;
+
+    Attachable(OnAttachableInit init, OnAttachableCall call, const char* display, const char* desc, DataType request, DataType ret)
+        : OnInit(init), OnCall(call), RequestType(request), ReturnType(ret) {
+
+        DisplayName = new char[strlen(display) + 1];
+        strcpy(DisplayName, display);
+
+        Description = new char[strlen(desc) + 1];
+        strcpy(Description, desc);
+    }
+
+    Attachable(const Attachable& other)
+        : OnInit(other.OnInit), OnCall(other.OnCall), RequestType(other.RequestType), ReturnType(other.ReturnType) {
+
+        DisplayName = new char[strlen(other.DisplayName) + 1];
+        strcpy(DisplayName, other.DisplayName);
+
+        Description = new char[strlen(other.Description) + 1];
+        strcpy(Description, other.Description);
+    }
 
     ~Attachable(void) {
         delete[] DisplayName;
+        delete[] Description;
     }
 };
 
 
 class AttachableRegistry {
 public:
-    // Singleton object.
     static AttachableRegistry& instance(void) {
         static AttachableRegistry i = AttachableRegistry();
         return i;
     }
 
-    // Register a new attachable.
-    void RegisterAttachable(Attachable& attachable) {
-        attachables.push_back(attachable);
+    void init(void) {
+        for (Attachable& a : attachables) a.OnInit();
     }
 
-    // Find the attachable at the given location. Returns null if the attachable doesn't exist.
-    const Attachable* find(byte device, byte port) {
-        for (byte i = 0; i < attachables.size(); ++i) {
-            Attachable& a = attachables[i];
-            if (a.device == device && a.port == port) return &a;
+    void RegisterLocal(Attachable& a) {
+        attachables.push_back(a);
+    }
+
+    Attachable& GetAttachable(byte index) {
+        return attachables[index];
+    }
+
+    String GetAttachableDisplayData(void) {
+        String result;
+
+        byte i = 0;
+        for (Attachable& a : attachables) {
+            char index[4];
+            sprintf(index, "%03.3i", i++);
+
+            result += index;
+            result += ": ";
+            result += a.DisplayName;
+            result += " (";
+            result += a.Description;
+            result += ")\n";
         }
 
-        return nullptr;
+        return result;
+    }
+
+    byte size(void) const {
+        return attachables.size();
     }
 private:
-    AttachableRegistry(void) = default;
-
     Vector<Attachable> attachables;
-};
+};*/

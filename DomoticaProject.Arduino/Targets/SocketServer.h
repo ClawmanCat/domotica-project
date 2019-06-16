@@ -1,13 +1,12 @@
 #pragma once
 
 #include "IArduinoTarget.h"
-#include "../Shared/AttachableRegistry.h"
+//#include "../Shared/AttachableRegistry.h"
 #include "../Shared/GlobalSerial.h"
 #include "../Server/ServerCommandHandler.h"
 #include "../Server/Message.h"
 
 #include <Ethernet.h>
-#include <Vector.h>
 
 struct SocketServer : public IArduinoTarget<SocketServer> {
     const static byte MAC_ADDRESS[6];   // Any address will work, as long as it's not used by a different device in the network.
@@ -22,6 +21,8 @@ struct SocketServer : public IArduinoTarget<SocketServer> {
 
         GSerial.print("Initialized socket server at ");
         GSerial.println(Ethernet.localIP());
+
+        //AttRegistry.init();
     }
 
     static void loop(void) {
@@ -40,7 +41,7 @@ struct SocketServer : public IArduinoTarget<SocketServer> {
             
             Message* msg;
             {
-                // Read message data.
+                // Read message data until we have the entire header (6 bytes) and a null-terminator character is received.
                 byte MsgBuffer[256];
                 byte size = 0;
                 do {
@@ -51,11 +52,19 @@ struct SocketServer : public IArduinoTarget<SocketServer> {
                 if (size < 7) {
                     GSerial.println("<Received corrupt or invalid message>");
                     return;
+                } else {
+                    GSerial.print("Received message from ");
+                    GSerial.print(client.remoteIP());
+                    GSerial.println(": ");
+                    
+                    byte at = 0;
+                    while (MsgBuffer[at] != '\0') GSerial.printf("0x%0.02X ", (int) MsgBuffer[at++]);
+                    GSerial.println();
                 }
 
                 // Construct message object.
                 msg = new Message(
-                    *((int32_t*)&MsgBuffer[0]),
+                    *((int32_t*) &MsgBuffer[0]),
                     MsgBuffer[4],
                     MsgBuffer[5],
                     (char*)(MsgBuffer + 6)
@@ -81,7 +90,9 @@ struct SocketServer : public IArduinoTarget<SocketServer> {
                 delete[] binresponse;
             } else {
                 // Handle as attachable request.
-                // TODO
+                //if (msg->port >= AttRegistry.size()) return;
+                //Attachable& a = AttRegistry.GetAttachable(msg->port);
+                //a.OnCall(*msg);
             }
         }
     }

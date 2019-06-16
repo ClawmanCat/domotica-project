@@ -11,9 +11,11 @@ using System.Timers;
 using Timer = System.Timers.Timer;
 
 namespace DomoticaProject.Server {
-    class ConnectionManager {
+    public class ConnectionManager {
         public delegate void OnAnswerReceived(string answer);       // Called when a response is received to a message.
         public delegate void OnAnswerTimeout();                     // Called when no response is received to a message within the timeout period.
+
+        public readonly ServerCommandManager CommandManager;
 
         private Thread thread;
         private bool ShouldShutdown;
@@ -27,6 +29,8 @@ namespace DomoticaProject.Server {
         private int port;
 
         public ConnectionManager(IPAddress address, int port) {
+            this.CommandManager = new ServerCommandManager(this);
+
             this.address = address;
             this.port = port;
             this.ShouldShutdown = false;
@@ -36,7 +40,6 @@ namespace DomoticaProject.Server {
             this.mtx = new Mutex();
 
             this.socket = new Socket(this.address.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
-            this.socket.ReceiveTimeout = 250;
 
             // Thread listens for responses to sent messages.
             this.thread = new Thread(() => {
@@ -96,14 +99,10 @@ namespace DomoticaProject.Server {
 
                 DateTime start = DateTime.Now;
 
-                // Wait for connection if not already connected.
-                while (!socket.Connected && DateTime.Now - start < timeout) {}
+                // Send message & add it to the queue of messages awaiting an answer.
+                socket.SendTimeout = (int) timeout.TotalMilliseconds;
 
-                if (!socket.Connected) {
-                    // No connection in time -> call timeout callback.
-                    OnTimeout();
-                } else {
-                    // Send message & add it to the queue of messages awaiting an answer.
+                try {
                     socket.Send(msg);
                     AwaitedAnswers.Add(ID, (OnReceived, OnTimeout));
 
@@ -115,7 +114,7 @@ namespace DomoticaProject.Server {
 
                     timer.Elapsed += (object src, ElapsedEventArgs e) => {
                         mtx.WaitOne();
-                        
+
                         if (AwaitedAnswers.TryGetValue(ID, out (OnAnswerReceived, OnAnswerTimeout) value)) {
                             value.Item2();
                             AwaitedAnswers.Remove(ID);
@@ -125,6 +124,8 @@ namespace DomoticaProject.Server {
                     };
 
                     timer.Start();
+                } catch (SocketException) {
+                    OnTimeout();
                 }
 
                 mtx.ReleaseMutex();
@@ -133,6 +134,10 @@ namespace DomoticaProject.Server {
 
         public bool IsConnected() {
             return socket.Connected;
+        }
+
+        public (IPAddress, int) GetConnectionAddress() {
+            return (address, port);
         }
 
         public void Shutdown() {
