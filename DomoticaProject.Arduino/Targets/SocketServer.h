@@ -39,7 +39,7 @@ struct SocketServer : public IArduinoTarget<SocketServer> {
             // Remainder: Null-terminated string containing optional data. If there is no data, just the null-terminator is sent.
             // Max message length is 256 bytes.
             
-            Message* msg;
+            Unique<Message> msg = Unique<Message>();
             {
                 // Read message data until we have the entire header (6 bytes) and a null-terminator character is received.
                 byte MsgBuffer[256];
@@ -63,7 +63,10 @@ struct SocketServer : public IArduinoTarget<SocketServer> {
                 }
 
                 // Construct message object.
-                msg = new Message(
+                // Assignment here is safe, since the unique is guaranteed to not have been assigned yet.
+                // (Scope here only serves to reduce lifetime of other resources, otherwise it could have
+                // been diretly assigned.)
+                msg.raw_ptr() = new Message(
                     *((int32_t*) &MsgBuffer[0]),
                     MsgBuffer[4],
                     MsgBuffer[5],
@@ -82,14 +85,12 @@ struct SocketServer : public IArduinoTarget<SocketServer> {
                 // Length = string length + null terminator + 4 bytes of message ID.
                 byte len = strlen(response.raw_ptr());
 
-                byte* binresponse = new byte[len + 5];
-                memcpy(binresponse, &((*msg).MessageID), 4);
-                memcpy(binresponse + 4, response.raw_ptr(), len + 1);
+                UniqueArray<byte> binresponse = new byte[len + 5];
+                memcpy(binresponse.raw_ptr(), &((*msg).MessageID), 4);
+                memcpy(binresponse.raw_ptr() + 4, response.raw_ptr(), len + 1);
 
                 // Send response.
-                client.write(binresponse, len + 5);
-
-                delete[] binresponse;
+                client.write(binresponse.raw_ptr(), len + 5);
             } else {
                 // Handle as attachable request.
                 //if (msg->port >= AttRegistry.size()) return;

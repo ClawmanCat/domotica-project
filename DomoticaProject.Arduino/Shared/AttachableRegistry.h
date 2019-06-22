@@ -8,6 +8,8 @@
 #include "../Shared/MagicEnum.h"
 #include "../Server/Message.h"
 
+// REDO THIS CODE WITHOUT UNMANAGED NEW CALLS!!!
+
 /*
 #define AttRegistry AttachableRegistry::instance()
 

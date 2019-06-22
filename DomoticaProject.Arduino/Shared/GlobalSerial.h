@@ -1,6 +1,7 @@
 #pragma once
 
 #include <Arduino.h>
+#include "../Shared/Unique.h"
 
 #define GSerial GlobalSerial::instance()
 
@@ -27,17 +28,15 @@ public:
         init();
 
         const short bufsize = 2 * strlen(format) + 32;
-        char* buf = new char[bufsize];
+        UniqueArray<char> buf = new char[bufsize];
 
-        int result = snprintf(buf, bufsize, format, args...);
+        int result = snprintf(buf.raw_ptr(), bufsize, format, args...);
 
         if (result == -1 || result > bufsize) {
-            GSerial.println("<Error printing formatted data>");
+            GSerial.println(F("<Error printing formatted data>"));
         } else {
-            GSerial.print(buf);
+            GSerial.print(buf.raw_ptr());
         }
-
-        delete[] buf;
     }
 private:
     bool initialized;

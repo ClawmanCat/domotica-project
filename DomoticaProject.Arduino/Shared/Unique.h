@@ -6,6 +6,8 @@ public:
         ptr = new T(args...);
     }
 
+    Unique(void) : ptr(nullptr) {}
+
     Unique(T* ptr) : ptr(ptr) {}
 
     ~Unique(void) {
@@ -19,7 +21,11 @@ public:
         other.ptr = nullptr;
     }
 
-    T& operator->(void) {
+    T* operator->(void) {
+        return ptr;
+    }
+
+    T& operator*(void) {
         return *ptr;
     }
 
@@ -27,8 +33,12 @@ public:
         return *ptr;
     }
 
-    T* raw_ptr(void) {
+    T*& raw_ptr(void) {
         return ptr;
+    }
+
+    bool is_assigned(void) const {
+        return ptr != nullptr;
     }
 private:
     mutable T* ptr;
