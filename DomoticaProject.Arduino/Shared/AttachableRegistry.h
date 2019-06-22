@@ -3,7 +3,6 @@
 #pragma once
 
 #include <Arduino.h>
-#include <ArduinoSTL.h>
 
 #include "../Shared/Vector.h"
 #include "../Shared/MagicEnum.h"

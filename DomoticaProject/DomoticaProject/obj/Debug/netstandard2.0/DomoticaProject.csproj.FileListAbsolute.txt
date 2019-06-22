@@ -14,10 +14,14 @@ D:\Workspace\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstand
 D:\Workspace\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\DomoticaProject.AssemblyInfoInputs.cache
 D:\Workspace\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\DomoticaProject.AssemblyInfo.cs
 D:\Workspace\domotica-project\DomoticaProject\DomoticaProject\bin\Debug\netstandard2.0\DomoticaProject.pdb
-D:\Workspace\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\XamlC.stamp
 D:\Workspace\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\DomoticaProject.dll
 D:\Workspace\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\DomoticaProject.pdb
 D:\Workspace\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\MVVM\ConnectionPage.xaml.g.cs
 D:\Workspace\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\MVVM\MasterPage.xaml.g.cs
 D:\Workspace\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\MVVM\WelcomePage.xaml.g.cs
 D:\Workspace\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\MVVM\CommandPage.xaml.g.cs
+D:\Workspace\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\MVVM\LuaEditor.xaml.g.cs
+D:\Workspace\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\MVVM\SaveLuaPage.xaml.g.cs
+D:\Workspace\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\MVVM\LoggerPage.xaml.g.cs
+D:\Workspace\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\MVVM\OpenLuaPage.xaml.g.cs
+D:\Workspace\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\XamlC.stamp

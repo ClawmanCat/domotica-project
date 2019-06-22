@@ -1,6 +1,17 @@
 DomoticaProject
-System.Runtime
 FormsViewGroup
+MoonSharp.Interpreter
+Plugin.FilePicker.Abstractions
+Plugin.FilePicker
+Plugin.Settings.Abstractions
+Plugin.Settings
+SQLite-net
+SQLitePCLRaw.batteries_green
+SQLitePCLRaw.batteries_v2
+SQLitePCLRaw.core
+SQLitePCLRaw.lib.e_sqlite3
+SQLitePCLRaw.provider.e_sqlite3
+System.Runtime
 Xamarin.Android.Arch.Core.Common
 Xamarin.Android.Arch.Lifecycle.Common
 Xamarin.Android.Arch.Lifecycle.Runtime
@@ -24,13 +35,6 @@ Xamarin.Forms.Core
 Xamarin.Forms.Platform.Android
 Xamarin.Forms.Platform
 Xamarin.Forms.Xaml
-SQLite-net
-SQLitePCLRaw.batteries_green
-SQLitePCLRaw.batteries_v2
-SQLitePCLRaw.core
-SQLitePCLRaw.lib.e_sqlite3
-SQLitePCLRaw.provider.e_sqlite3
-MoonSharp.Interpreter
 netstandard
 System.Runtime.InteropServices
 System.Diagnostics.Debug
@@ -50,3 +54,4 @@ System.Console
 System.Threading
 System.Threading.Tasks
 System.Text.Encoding.Extensions
+System.Resources.ResourceManager

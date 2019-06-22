@@ -1389,14 +1389,14 @@ namespace DomoticaProject.Droid
 			// aapt resource value: 0x7F060004
 			public const int cardview_shadow_start_color = 2131099652;
 			
-			// aapt resource value: 0x7F040005
-			public const int colorAccent = 2130968581;
+			// aapt resource value: 0x7F050005
+			public const int colorAccent = 2131034117;
 			
-			// aapt resource value: 0x7F040003
-			public const int colorPrimary = 2130968579;
+			// aapt resource value: 0x7F050003
+			public const int colorPrimary = 2131034115;
 			
-			// aapt resource value: 0x7F040004
-			public const int colorPrimaryDark = 2130968580;
+			// aapt resource value: 0x7F050004
+			public const int colorPrimaryDark = 2131034116;
 			
 			// aapt resource value: 0x7F060027
 			public const int design_bottom_navigation_shadow_color = 2131099687;
@@ -1458,14 +1458,14 @@ namespace DomoticaProject.Droid
 			// aapt resource value: 0x7F06003A
 			public const int highlighted_text_material_light = 2131099706;
 			
-			// aapt resource value: 0x7F040002
-			public const int launcher_background = 2130968578;
+			// aapt resource value: 0x7F050002
+			public const int launcher_background = 2131034114;
 			
-			// aapt resource value: 0x7F040007
-			public const int ListViewHighlighted = 2130968583;
+			// aapt resource value: 0x7F050007
+			public const int ListViewHighlighted = 2131034119;
 			
-			// aapt resource value: 0x7F040006
-			public const int ListViewSelected = 2130968582;
+			// aapt resource value: 0x7F050006
+			public const int ListViewSelected = 2131034118;
 			
 			// aapt resource value: 0x7F06003B
 			public const int material_blue_grey_800 = 2131099707;
@@ -2999,6 +2999,18 @@ namespace DomoticaProject.Droid
 			// aapt resource value: 0x7F09000C
 			public const int notify_panel_notification_icon_bg = 2131296268;
 			
+			// aapt resource value: 0x7F010002
+			public const int no_play = 2130771970;
+			
+			// aapt resource value: 0x7F010003
+			public const int open = 2130771971;
+			
+			// aapt resource value: 0x7F010004
+			public const int play = 2130771972;
+			
+			// aapt resource value: 0x7F010005
+			public const int save = 2130771973;
+			
 			// aapt resource value: 0x7F090069
 			public const int tooltip_frame_dark = 2131296361;
 			
@@ -3411,8 +3423,8 @@ namespace DomoticaProject.Droid
 			// aapt resource value: 0x7F0C006A
 			public const int shortcut = 2131492970;
 			
-			// aapt resource value: 0x7F010002
-			public const int sliding_tabs = 2130771970;
+			// aapt resource value: 0x7F020002
+			public const int sliding_tabs = 2130837506;
 			
 			// aapt resource value: 0x7F0C006B
 			public const int smallLabel = 2131492971;
@@ -3486,8 +3498,8 @@ namespace DomoticaProject.Droid
 			// aapt resource value: 0x7F0C0082
 			public const int title_template = 2131492994;
 			
-			// aapt resource value: 0x7F010003
-			public const int toolbar = 2130771971;
+			// aapt resource value: 0x7F020003
+			public const int toolbar = 2130837507;
 			
 			// aapt resource value: 0x7F0C0083
 			public const int top = 2131492995;
@@ -3813,11 +3825,11 @@ namespace DomoticaProject.Droid
 			// aapt resource value: 0x7F0F003C
 			public const int support_simple_spinner_dropdown_item = 2131689532;
 			
-			// aapt resource value: 0x7F020002
-			public const int Tabbar = 2130837506;
+			// aapt resource value: 0x7F030002
+			public const int Tabbar = 2130903042;
 			
-			// aapt resource value: 0x7F020003
-			public const int Toolbar = 2130837507;
+			// aapt resource value: 0x7F030003
+			public const int Toolbar = 2130903043;
 			
 			// aapt resource value: 0x7F0F003D
 			public const int tooltip = 2131689533;
@@ -3835,14 +3847,14 @@ namespace DomoticaProject.Droid
 		public partial class Mipmap
 		{
 			
-			// aapt resource value: 0x7F030002
-			public const int icon = 2130903042;
+			// aapt resource value: 0x7F040002
+			public const int icon = 2130968578;
 			
-			// aapt resource value: 0x7F030003
-			public const int icon_round = 2130903043;
+			// aapt resource value: 0x7F040003
+			public const int icon_round = 2130968579;
 			
-			// aapt resource value: 0x7F030004
-			public const int launcher_foreground = 2130903044;
+			// aapt resource value: 0x7F040004
+			public const int launcher_foreground = 2130968580;
 			
 			static Mipmap()
 			{
@@ -4074,8 +4086,8 @@ namespace DomoticaProject.Droid
 			// aapt resource value: 0x7F160006
 			public const int Animation_Design_BottomSheetDialog = 2132148230;
 			
-			// aapt resource value: 0x7F050004
-			public const int AppCompatDialogStyle = 2131034116;
+			// aapt resource value: 0x7F060004
+			public const int AppCompatDialogStyle = 2131099652;
 			
 			// aapt resource value: 0x7F160007
 			public const int Base_AlertDialog_AppCompat = 2132148231;
@@ -4578,14 +4590,14 @@ namespace DomoticaProject.Droid
 			// aapt resource value: 0x7F160004
 			public const int CardView_Light = 2132148228;
 			
-			// aapt resource value: 0x7F050005
-			public const int DarkMenu = 2131034117;
+			// aapt resource value: 0x7F060005
+			public const int DarkMenu = 2131099653;
 			
-			// aapt resource value: 0x7F050002
-			public const int MainTheme = 2131034114;
+			// aapt resource value: 0x7F060002
+			public const int MainTheme = 2131099650;
 			
-			// aapt resource value: 0x7F050003
-			public const int MainTheme_Base = 2131034115;
+			// aapt resource value: 0x7F060003
+			public const int MainTheme_Base = 2131099651;
 			
 			// aapt resource value: 0x7F1600AA
 			public const int Platform_AppCompat = 2132148394;
@@ -5342,11 +5354,11 @@ namespace DomoticaProject.Droid
 			public static int[] ActionBarLayout = new int[] {
 					16842931};
 			
-			// aapt resource value: 0x7F060044
-			public const int ActionBarLayout_android_layout_gravity = 2131099716;
+			// aapt resource value: 0x7F070044
+			public const int ActionBarLayout_android_layout_gravity = 2131165252;
 			
-			// aapt resource value: 0x7F060014
-			public const int ActionBar_background = 2131099668;
+			// aapt resource value: 0x7F070014
+			public const int ActionBar_background = 2131165204;
 			
 			// aapt resource value: 0x1
 			public const int ActionBar_backgroundSplit = 1;
@@ -5435,8 +5447,8 @@ namespace DomoticaProject.Droid
 			public static int[] ActionMenuItemView = new int[] {
 					16843071};
 			
-			// aapt resource value: 0x7F060046
-			public const int ActionMenuItemView_android_minWidth = 2131099718;
+			// aapt resource value: 0x7F070046
+			public const int ActionMenuItemView_android_minWidth = 2131165254;
 			
 			public static int[] ActionMode = new int[] {
 					2130968626,
@@ -5446,8 +5458,8 @@ namespace DomoticaProject.Droid
 					2130968847,
 					2130968901};
 			
-			// aapt resource value: 0x7F060048
-			public const int ActionMode_background = 2131099720;
+			// aapt resource value: 0x7F070048
+			public const int ActionMode_background = 2131165256;
 			
 			// aapt resource value: 0x1
 			public const int ActionMode_backgroundSplit = 1;
@@ -5468,8 +5480,8 @@ namespace DomoticaProject.Droid
 					2130968704,
 					2130968746};
 			
-			// aapt resource value: 0x7F060055
-			public const int ActivityChooserView_expandActivityOverflowButtonDrawable = 2131099733;
+			// aapt resource value: 0x7F070055
+			public const int ActivityChooserView_expandActivityOverflowButtonDrawable = 2131165269;
 			
 			// aapt resource value: 0x1
 			public const int ActivityChooserView_initialActivityCount = 1;
@@ -5483,8 +5495,8 @@ namespace DomoticaProject.Droid
 					2130968828,
 					2130968829};
 			
-			// aapt resource value: 0x7F060058
-			public const int AlertDialog_android_layout = 2131099736;
+			// aapt resource value: 0x7F070058
+			public const int AlertDialog_android_layout = 2131165272;
 			
 			// aapt resource value: 0x1
 			public const int AlertDialog_buttonPanelSideLayout = 1;
@@ -5515,14 +5527,14 @@ namespace DomoticaProject.Droid
 					2130968838,
 					2130968839};
 			
-			// aapt resource value: 0x7F060072
-			public const int AppBarLayoutStates_state_collapsed = 2131099762;
+			// aapt resource value: 0x7F070072
+			public const int AppBarLayoutStates_state_collapsed = 2131165298;
 			
 			// aapt resource value: 0x1
 			public const int AppBarLayoutStates_state_collapsible = 1;
 			
-			// aapt resource value: 0x7F060066
-			public const int AppBarLayout_android_background = 2131099750;
+			// aapt resource value: 0x7F070066
+			public const int AppBarLayout_android_background = 2131165286;
 			
 			// aapt resource value: 0x1
 			public const int AppBarLayout_android_keyboardNavigationCluster = 1;
@@ -5540,8 +5552,8 @@ namespace DomoticaProject.Droid
 					2130968765,
 					2130968766};
 			
-			// aapt resource value: 0x7F060075
-			public const int AppBarLayout_Layout_layout_scrollFlags = 2131099765;
+			// aapt resource value: 0x7F070075
+			public const int AppBarLayout_Layout_layout_scrollFlags = 2131165301;
 			
 			// aapt resource value: 0x1
 			public const int AppBarLayout_Layout_layout_scrollInterpolator = 1;
@@ -5552,8 +5564,8 @@ namespace DomoticaProject.Droid
 					2130968889,
 					2130968890};
 			
-			// aapt resource value: 0x7F060078
-			public const int AppCompatImageView_android_src = 2131099768;
+			// aapt resource value: 0x7F070078
+			public const int AppCompatImageView_android_src = 2131165304;
 			
 			// aapt resource value: 0x1
 			public const int AppCompatImageView_srcCompat = 1;
@@ -5570,8 +5582,8 @@ namespace DomoticaProject.Droid
 					2130968887,
 					2130968888};
 			
-			// aapt resource value: 0x7F060083
-			public const int AppCompatSeekBar_android_thumb = 2131099779;
+			// aapt resource value: 0x7F070083
+			public const int AppCompatSeekBar_android_thumb = 2131165315;
 			
 			// aapt resource value: 0x1
 			public const int AppCompatSeekBar_tickMark = 1;
@@ -5591,8 +5603,8 @@ namespace DomoticaProject.Droid
 					16843117,
 					16842804};
 			
-			// aapt resource value: 0x7F060088
-			public const int AppCompatTextHelper_android_drawableBottom = 2131099784;
+			// aapt resource value: 0x7F070088
+			public const int AppCompatTextHelper_android_drawableBottom = 2131165320;
 			
 			// aapt resource value: 0x1
 			public const int AppCompatTextHelper_android_drawableEnd = 1;
@@ -5622,8 +5634,8 @@ namespace DomoticaProject.Droid
 					2130968720,
 					2130968869};
 			
-			// aapt resource value: 0x7F060096
-			public const int AppCompatTextView_android_textAppearance = 2131099798;
+			// aapt resource value: 0x7F070096
+			public const int AppCompatTextView_android_textAppearance = 2131165334;
 			
 			// aapt resource value: 0x1
 			public const int AppCompatTextView_autoSizeMaxTextSize = 1;
@@ -5767,8 +5779,8 @@ namespace DomoticaProject.Droid
 					2130968921,
 					2130968922};
 			
-			// aapt resource value: 0x7F060105
-			public const int AppCompatTheme_actionBarDivider = 2131099909;
+			// aapt resource value: 0x7F070105
+			public const int AppCompatTheme_actionBarDivider = 2131165445;
 			
 			// aapt resource value: 0x1
 			public const int AppCompatTheme_actionBarItemBackground = 1;
@@ -6131,8 +6143,8 @@ namespace DomoticaProject.Droid
 					2130968753,
 					2130968783};
 			
-			// aapt resource value: 0x7F060225
-			public const int BottomNavigationView_elevation = 2131100197;
+			// aapt resource value: 0x7F070225
+			public const int BottomNavigationView_elevation = 2131165733;
 			
 			// aapt resource value: 0x1
 			public const int BottomNavigationView_itemBackground = 1;
@@ -6151,8 +6163,8 @@ namespace DomoticaProject.Droid
 					2130968635,
 					2130968636};
 			
-			// aapt resource value: 0x7F060231
-			public const int BottomSheetBehavior_Layout_behavior_hideable = 2131100209;
+			// aapt resource value: 0x7F070231
+			public const int BottomSheetBehavior_Layout_behavior_hideable = 2131165745;
 			
 			// aapt resource value: 0x1
 			public const int BottomSheetBehavior_Layout_behavior_peekHeight = 1;
@@ -6163,8 +6175,8 @@ namespace DomoticaProject.Droid
 			public static int[] ButtonBarLayout = new int[] {
 					2130968615};
 			
-			// aapt resource value: 0x7F060235
-			public const int ButtonBarLayout_allowStacking = 2131100213;
+			// aapt resource value: 0x7F070235
+			public const int ButtonBarLayout_allowStacking = 2131165749;
 			
 			public static int[] CardView = new int[] {
 					16843072,
@@ -6181,8 +6193,8 @@ namespace DomoticaProject.Droid
 					2130968586,
 					2130968587};
 			
-			// aapt resource value: 0x7F060538
-			public const int CardView_android_minHeight = 2131100984;
+			// aapt resource value: 0x7F070538
+			public const int CardView_android_minHeight = 2131166520;
 			
 			// aapt resource value: 0x1
 			public const int CardView_android_minWidth = 1;
@@ -6238,8 +6250,8 @@ namespace DomoticaProject.Droid
 					2130968892,
 					2130968902};
 			
-			// aapt resource value: 0x7F060237
-			public const int CollapsingToolbarLayout_collapsedTitleGravity = 2131100215;
+			// aapt resource value: 0x7F070237
+			public const int CollapsingToolbarLayout_collapsedTitleGravity = 2131165751;
 			
 			// aapt resource value: 0x1
 			public const int CollapsingToolbarLayout_collapsedTitleTextAppearance = 1;
@@ -6272,8 +6284,8 @@ namespace DomoticaProject.Droid
 					2130968760,
 					2130968761};
 			
-			// aapt resource value: 0x7F060254
-			public const int CollapsingToolbarLayout_Layout_layout_collapseMode = 2131100244;
+			// aapt resource value: 0x7F070254
+			public const int CollapsingToolbarLayout_Layout_layout_collapseMode = 2131165780;
 			
 			// aapt resource value: 0x1
 			public const int CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = 1;
@@ -6301,8 +6313,8 @@ namespace DomoticaProject.Droid
 					16843551,
 					16843173};
 			
-			// aapt resource value: 0x7F060257
-			public const int ColorStateListItem_alpha = 2131100247;
+			// aapt resource value: 0x7F070257
+			public const int ColorStateListItem_alpha = 2131165783;
 			
 			// aapt resource value: 0x1
 			public const int ColorStateListItem_android_alpha = 1;
@@ -6315,8 +6327,8 @@ namespace DomoticaProject.Droid
 					2130968650,
 					2130968651};
 			
-			// aapt resource value: 0x7F060261
-			public const int CompoundButton_android_button = 2131100257;
+			// aapt resource value: 0x7F070261
+			public const int CompoundButton_android_button = 2131165793;
 			
 			// aapt resource value: 0x1
 			public const int CompoundButton_buttonTint = 1;
@@ -6328,8 +6340,8 @@ namespace DomoticaProject.Droid
 					2130968754,
 					2130968840};
 			
-			// aapt resource value: 0x7F060265
-			public const int CoordinatorLayout_keylines = 2131100261;
+			// aapt resource value: 0x7F070265
+			public const int CoordinatorLayout_keylines = 2131165797;
 			
 			public static int[] CoordinatorLayout_Layout = new int[] {
 					16842931,
@@ -6340,8 +6352,8 @@ namespace DomoticaProject.Droid
 					2130968763,
 					2130968764};
 			
-			// aapt resource value: 0x7F060268
-			public const int CoordinatorLayout_Layout_android_layout_gravity = 2131100264;
+			// aapt resource value: 0x7F070268
+			public const int CoordinatorLayout_Layout_android_layout_gravity = 2131165800;
 			
 			// aapt resource value: 0x1
 			public const int CoordinatorLayout_Layout_layout_anchor = 1;
@@ -6369,8 +6381,8 @@ namespace DomoticaProject.Droid
 					2130968640,
 					2130968879};
 			
-			// aapt resource value: 0x7F060276
-			public const int DesignTheme_bottomSheetDialogTheme = 2131100278;
+			// aapt resource value: 0x7F070276
+			public const int DesignTheme_bottomSheetDialogTheme = 2131165814;
 			
 			// aapt resource value: 0x1
 			public const int DesignTheme_bottomSheetStyle = 1;
@@ -6388,8 +6400,8 @@ namespace DomoticaProject.Droid
 					2130968831,
 					2130968882};
 			
-			// aapt resource value: 0x7F060280
-			public const int DrawerArrowToggle_arrowHeadLength = 2131100288;
+			// aapt resource value: 0x7F070280
+			public const int DrawerArrowToggle_arrowHeadLength = 2131165824;
 			
 			// aapt resource value: 0x1
 			public const int DrawerArrowToggle_arrowShaftLength = 1;
@@ -6422,8 +6434,8 @@ namespace DomoticaProject.Droid
 					2130968816,
 					2130968911};
 			
-			// aapt resource value: 0x7F060289
-			public const int FloatingActionButton_backgroundTint = 2131100297;
+			// aapt resource value: 0x7F070289
+			public const int FloatingActionButton_backgroundTint = 2131165833;
 			
 			// aapt resource value: 0x1
 			public const int FloatingActionButton_backgroundTintMode = 1;
@@ -6431,8 +6443,8 @@ namespace DomoticaProject.Droid
 			public static int[] FloatingActionButton_Behavior_Layout = new int[] {
 					2130968632};
 			
-			// aapt resource value: 0x7F060298
-			public const int FloatingActionButton_Behavior_Layout_behavior_autoHide = 2131100312;
+			// aapt resource value: 0x7F070298
+			public const int FloatingActionButton_Behavior_Layout_behavior_autoHide = 2131165848;
 			
 			// aapt resource value: 0x2
 			public const int FloatingActionButton_borderWidth = 2;
@@ -6465,8 +6477,8 @@ namespace DomoticaProject.Droid
 					2130968584,
 					2130968585};
 			
-			// aapt resource value: 0x7F060010
-			public const int FontFamilyFont_font = 2131099664;
+			// aapt resource value: 0x7F070010
+			public const int FontFamilyFont_font = 2131165200;
 			
 			// aapt resource value: 0x1
 			public const int FontFamilyFont_fontStyle = 1;
@@ -6474,8 +6486,8 @@ namespace DomoticaProject.Droid
 			// aapt resource value: 0x2
 			public const int FontFamilyFont_fontWeight = 2;
 			
-			// aapt resource value: 0x7F060003
-			public const int FontFamily_fontProviderAuthority = 2131099651;
+			// aapt resource value: 0x7F070003
+			public const int FontFamily_fontProviderAuthority = 2131165187;
 			
 			// aapt resource value: 0x1
 			public const int FontFamily_fontProviderCerts = 1;
@@ -6497,8 +6509,8 @@ namespace DomoticaProject.Droid
 					16843264,
 					2130968729};
 			
-			// aapt resource value: 0x7F060300
-			public const int ForegroundLinearLayout_android_foreground = 2131100416;
+			// aapt resource value: 0x7F070300
+			public const int ForegroundLinearLayout_android_foreground = 2131165952;
 			
 			// aapt resource value: 0x1
 			public const int ForegroundLinearLayout_android_foregroundGravity = 1;
@@ -6517,8 +6529,8 @@ namespace DomoticaProject.Droid
 					2130968782,
 					2130968826};
 			
-			// aapt resource value: 0x7F060304
-			public const int LinearLayoutCompat_android_baselineAligned = 2131100420;
+			// aapt resource value: 0x7F070304
+			public const int LinearLayoutCompat_android_baselineAligned = 2131165956;
 			
 			// aapt resource value: 0x1
 			public const int LinearLayoutCompat_android_baselineAlignedChildIndex = 1;
@@ -6544,8 +6556,8 @@ namespace DomoticaProject.Droid
 					16843137,
 					16842996};
 			
-			// aapt resource value: 0x7F060314
-			public const int LinearLayoutCompat_Layout_android_layout_gravity = 2131100436;
+			// aapt resource value: 0x7F070314
+			public const int LinearLayoutCompat_Layout_android_layout_gravity = 2131165972;
 			
 			// aapt resource value: 0x1
 			public const int LinearLayoutCompat_Layout_android_layout_height = 1;
@@ -6566,8 +6578,8 @@ namespace DomoticaProject.Droid
 					16843436,
 					16843437};
 			
-			// aapt resource value: 0x7F060319
-			public const int ListPopupWindow_android_dropDownHorizontalOffset = 2131100441;
+			// aapt resource value: 0x7F070319
+			public const int ListPopupWindow_android_dropDownHorizontalOffset = 2131165977;
 			
 			// aapt resource value: 0x1
 			public const int ListPopupWindow_android_dropDownVerticalOffset = 1;
@@ -6578,8 +6590,8 @@ namespace DomoticaProject.Droid
 					2130968688,
 					2130968732};
 			
-			// aapt resource value: 0x7F060552
-			public const int MediaRouteButton_android_minHeight = 2131101010;
+			// aapt resource value: 0x7F070552
+			public const int MediaRouteButton_android_minHeight = 2131166546;
 			
 			// aapt resource value: 0x1
 			public const int MediaRouteButton_android_minWidth = 1;
@@ -6598,8 +6610,8 @@ namespace DomoticaProject.Droid
 					16843231,
 					16843156};
 			
-			// aapt resource value: 0x7F060322
-			public const int MenuGroup_android_checkableBehavior = 2131100450;
+			// aapt resource value: 0x7F070322
+			public const int MenuGroup_android_checkableBehavior = 2131165986;
 			
 			// aapt resource value: 0x1
 			public const int MenuGroup_android_enabled = 1;
@@ -6641,8 +6653,8 @@ namespace DomoticaProject.Droid
 					2130968825,
 					2130968907};
 			
-			// aapt resource value: 0x7F060329
-			public const int MenuItem_actionLayout = 2131100457;
+			// aapt resource value: 0x7F070329
+			public const int MenuItem_actionLayout = 2131165993;
 			
 			// aapt resource value: 0x1
 			public const int MenuItem_actionProviderClass = 1;
@@ -6721,8 +6733,8 @@ namespace DomoticaProject.Droid
 					2130968805,
 					2130968842};
 			
-			// aapt resource value: 0x7F060353
-			public const int MenuView_android_headerBackground = 2131100499;
+			// aapt resource value: 0x7F070353
+			public const int MenuView_android_headerBackground = 2131166035;
 			
 			// aapt resource value: 0x1
 			public const int MenuView_android_horizontalDivider = 1;
@@ -6760,8 +6772,8 @@ namespace DomoticaProject.Droid
 					2130968753,
 					2130968783};
 			
-			// aapt resource value: 0x7F060363
-			public const int NavigationView_android_background = 2131100515;
+			// aapt resource value: 0x7F070363
+			public const int NavigationView_android_background = 2131166051;
 			
 			// aapt resource value: 0x1
 			public const int NavigationView_android_fitsSystemWindows = 1;
@@ -6798,11 +6810,11 @@ namespace DomoticaProject.Droid
 			public static int[] PopupWindowBackgroundState = new int[] {
 					2130968837};
 			
-			// aapt resource value: 0x7F060378
-			public const int PopupWindowBackgroundState_state_above_anchor = 2131100536;
+			// aapt resource value: 0x7F070378
+			public const int PopupWindowBackgroundState_state_above_anchor = 2131166072;
 			
-			// aapt resource value: 0x7F060374
-			public const int PopupWindow_android_popupAnimationStyle = 2131100532;
+			// aapt resource value: 0x7F070374
+			public const int PopupWindow_android_popupAnimationStyle = 2131166068;
 			
 			// aapt resource value: 0x1
 			public const int PopupWindow_android_popupBackground = 1;
@@ -6814,8 +6826,8 @@ namespace DomoticaProject.Droid
 					2130968790,
 					2130968793};
 			
-			// aapt resource value: 0x7F060380
-			public const int RecycleListView_paddingBottomNoButtons = 2131100544;
+			// aapt resource value: 0x7F070380
+			public const int RecycleListView_paddingBottomNoButtons = 2131166080;
 			
 			// aapt resource value: 0x1
 			public const int RecycleListView_paddingTopNoTitle = 1;
@@ -6833,8 +6845,8 @@ namespace DomoticaProject.Droid
 					2130968830,
 					2130968836};
 			
-			// aapt resource value: 0x7F060383
-			public const int RecyclerView_android_descendantFocusability = 2131100547;
+			// aapt resource value: 0x7F070383
+			public const int RecyclerView_android_descendantFocusability = 2131166083;
 			
 			// aapt resource value: 0x1
 			public const int RecyclerView_android_orientation = 1;
@@ -6869,14 +6881,14 @@ namespace DomoticaProject.Droid
 			public static int[] ScrimInsetsFrameLayout = new int[] {
 					2130968747};
 			
-			// aapt resource value: 0x7F060395
-			public const int ScrimInsetsFrameLayout_insetForeground = 2131100565;
+			// aapt resource value: 0x7F070395
+			public const int ScrimInsetsFrameLayout_insetForeground = 2131166101;
 			
 			public static int[] ScrollingViewBehavior_Layout = new int[] {
 					2130968634};
 			
-			// aapt resource value: 0x7F060397
-			public const int ScrollingViewBehavior_Layout_behavior_overlapTop = 2131100567;
+			// aapt resource value: 0x7F070397
+			public const int ScrollingViewBehavior_Layout_behavior_overlapTop = 2131166103;
 			
 			public static int[] SearchView = new int[] {
 					16842970,
@@ -6897,8 +6909,8 @@ namespace DomoticaProject.Droid
 					2130968848,
 					2130968912};
 			
-			// aapt resource value: 0x7F060399
-			public const int SearchView_android_focusable = 2131100569;
+			// aapt resource value: 0x7F070399
+			public const int SearchView_android_focusable = 2131166105;
 			
 			// aapt resource value: 0x1
 			public const int SearchView_android_imeOptions = 1;
@@ -6953,8 +6965,8 @@ namespace DomoticaProject.Droid
 					2130968701,
 					2130968780};
 			
-			// aapt resource value: 0x7F060417
-			public const int SnackbarLayout_android_maxWidth = 2131100695;
+			// aapt resource value: 0x7F070417
+			public const int SnackbarLayout_android_maxWidth = 2131166231;
 			
 			// aapt resource value: 0x1
 			public const int SnackbarLayout_elevation = 1;
@@ -6969,8 +6981,8 @@ namespace DomoticaProject.Droid
 					16843131,
 					2130968803};
 			
-			// aapt resource value: 0x7F060421
-			public const int Spinner_android_dropDownWidth = 2131100705;
+			// aapt resource value: 0x7F070421
+			public const int Spinner_android_dropDownWidth = 2131166241;
 			
 			// aapt resource value: 0x1
 			public const int Spinner_android_entries = 1;
@@ -7000,8 +7012,8 @@ namespace DomoticaProject.Droid
 					2130968909,
 					2130968910};
 			
-			// aapt resource value: 0x7F060427
-			public const int SwitchCompat_android_textOff = 2131100711;
+			// aapt resource value: 0x7F070427
+			public const int SwitchCompat_android_textOff = 2131166247;
 			
 			// aapt resource value: 0x1
 			public const int SwitchCompat_android_textOn = 1;
@@ -7047,8 +7059,8 @@ namespace DomoticaProject.Droid
 					16842994,
 					16843087};
 			
-			// aapt resource value: 0x7F060442
-			public const int TabItem_android_icon = 2131100738;
+			// aapt resource value: 0x7F070442
+			public const int TabItem_android_icon = 2131166274;
 			
 			// aapt resource value: 0x1
 			public const int TabItem_android_layout = 1;
@@ -7074,8 +7086,8 @@ namespace DomoticaProject.Droid
 					2130968867,
 					2130968868};
 			
-			// aapt resource value: 0x7F060446
-			public const int TabLayout_tabBackground = 2131100742;
+			// aapt resource value: 0x7F070446
+			public const int TabLayout_tabBackground = 2131166278;
 			
 			// aapt resource value: 0x1
 			public const int TabLayout_tabContentStart = 1;
@@ -7137,8 +7149,8 @@ namespace DomoticaProject.Droid
 					2130968720,
 					2130968869};
 			
-			// aapt resource value: 0x7F060463
-			public const int TextAppearance_android_fontFamily = 2131100771;
+			// aapt resource value: 0x7F070463
+			public const int TextAppearance_android_fontFamily = 2131166307;
 			
 			// aapt resource value: 0x1
 			public const int TextAppearance_android_shadowColor = 1;
@@ -7194,8 +7206,8 @@ namespace DomoticaProject.Droid
 					2130968800,
 					2130968801};
 			
-			// aapt resource value: 0x7F060477
-			public const int TextInputLayout_android_hint = 2131100791;
+			// aapt resource value: 0x7F070477
+			public const int TextInputLayout_android_hint = 2131166327;
 			
 			// aapt resource value: 0x1
 			public const int TextInputLayout_android_textColorHint = 1;
@@ -7273,8 +7285,8 @@ namespace DomoticaProject.Droid
 					2130968899,
 					2130968900};
 			
-			// aapt resource value: 0x7F060494
-			public const int Toolbar_android_gravity = 2131100820;
+			// aapt resource value: 0x7F070494
+			public const int Toolbar_android_gravity = 2131166356;
 			
 			// aapt resource value: 0x1
 			public const int Toolbar_android_minHeight = 1;
@@ -7372,8 +7384,8 @@ namespace DomoticaProject.Droid
 					2130968629,
 					2130968630};
 			
-			// aapt resource value: 0x7F060530
-			public const int ViewBackgroundHelper_android_background = 2131100976;
+			// aapt resource value: 0x7F070530
+			public const int ViewBackgroundHelper_android_background = 2131166512;
 			
 			// aapt resource value: 0x1
 			public const int ViewBackgroundHelper_backgroundTint = 1;
@@ -7386,8 +7398,8 @@ namespace DomoticaProject.Droid
 					16842995,
 					16842994};
 			
-			// aapt resource value: 0x7F060534
-			public const int ViewStubCompat_android_id = 2131100980;
+			// aapt resource value: 0x7F070534
+			public const int ViewStubCompat_android_id = 2131166516;
 			
 			// aapt resource value: 0x1
 			public const int ViewStubCompat_android_inflatedId = 1;
@@ -7395,8 +7407,8 @@ namespace DomoticaProject.Droid
 			// aapt resource value: 0x2
 			public const int ViewStubCompat_android_layout = 2;
 			
-			// aapt resource value: 0x7F060524
-			public const int View_android_focusable = 2131100964;
+			// aapt resource value: 0x7F070524
+			public const int View_android_focusable = 2131166500;
 			
 			// aapt resource value: 0x1
 			public const int View_android_theme = 1;

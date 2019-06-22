@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DomoticaProject.MVVM.LuaEditor">
+     
+     <ContentPage.ToolbarItems>
+          <ToolbarItem Order="Primary" Icon="Images/play.png" Priority="0" Activated="PlayButtonClicked"></ToolbarItem>
+          <ToolbarItem Order="Primary" Icon="Images/open.png" Priority="1" Activated="OpenButtonClicked"></ToolbarItem>
+          <ToolbarItem Order="Primary" Icon="Images/save.png" Priority="2" Activated="SaveButtonClicked"></ToolbarItem>
+     </ContentPage.ToolbarItems>
+     
+     <ContentPage.Content>
+          <ScrollView>
+               <Editor x:Name="Editor" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Editor>
+          </ScrollView>
+     </ContentPage.Content>
+</ContentPage>

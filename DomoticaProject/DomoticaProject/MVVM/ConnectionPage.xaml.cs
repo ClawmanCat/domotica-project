@@ -1,4 +1,5 @@
 ﻿using DomoticaProject.Server;
+using DomoticaProject.Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,9 +28,8 @@ namespace DomoticaProject.MVVM {
 			InitializeComponent();
 
             // Auto-fill last connection info, if it exists.
-            var Props = Application.Current.Properties;
-            if (Props.ContainsKey("LastIP"))   IPEntry.Text   = Props["LastIP"]   as string;
-            if (Props.ContainsKey("LastPort")) PortEntry.Text = Props["LastPort"] as string;
+            IPEntry.Text   = SettingsManager.instance.GetOrDefault("LastIP",   "");
+            PortEntry.Text = SettingsManager.instance.GetOrDefault("LastPort", "");
         }
 
         private void ConnectClicked(object sender, EventArgs e) {
@@ -52,9 +52,8 @@ namespace DomoticaProject.MVVM {
                         SetFeedback(SUCCESS_SYMBOL, "Connection established with Arduino.");
 
                         // Save the connection info for next time.
-                        var Props = Application.Current.Properties;
-                        Props["LastIP"]   = address.ToString();
-                        Props["LastPort"] = port.ToString();
+                        SettingsManager.instance["LastIP"]   = address.ToString();
+                        SettingsManager.instance["LastPort"] = port.ToString();
                     } else {
                         SetFeedback(WAITING_SYMBOL, "Connecting...");
                     }

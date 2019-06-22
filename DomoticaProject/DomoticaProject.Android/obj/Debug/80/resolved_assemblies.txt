@@ -5,6 +5,16 @@ D:\Workspace\domotica-project\DomoticaProject\DomoticaProject.Android\obj\Debug\
 D:\Workspace\domotica-project\DomoticaProject\DomoticaProject.Android\obj\Debug\80\android\assets\Mono.Android.dll
 D:\Workspace\domotica-project\DomoticaProject\DomoticaProject.Android\obj\Debug\80\android\assets\MoonSharp.Interpreter.dll
 D:\Workspace\domotica-project\DomoticaProject\DomoticaProject.Android\obj\Debug\80\android\assets\mscorlib.dll
+D:\Workspace\domotica-project\DomoticaProject\DomoticaProject.Android\obj\Debug\80\android\assets\Plugin.FilePicker.Abstractions.dll
+D:\Workspace\domotica-project\DomoticaProject\DomoticaProject.Android\obj\Debug\80\android\assets\Plugin.FilePicker.dll
+D:\Workspace\domotica-project\DomoticaProject\DomoticaProject.Android\obj\Debug\80\android\assets\Plugin.Settings.Abstractions.dll
+D:\Workspace\domotica-project\DomoticaProject\DomoticaProject.Android\obj\Debug\80\android\assets\Plugin.Settings.dll
+D:\Workspace\domotica-project\DomoticaProject\DomoticaProject.Android\obj\Debug\80\android\assets\SQLite-net.dll
+D:\Workspace\domotica-project\DomoticaProject\DomoticaProject.Android\obj\Debug\80\android\assets\SQLitePCLRaw.batteries_green.dll
+D:\Workspace\domotica-project\DomoticaProject\DomoticaProject.Android\obj\Debug\80\android\assets\SQLitePCLRaw.batteries_v2.dll
+D:\Workspace\domotica-project\DomoticaProject\DomoticaProject.Android\obj\Debug\80\android\assets\SQLitePCLRaw.core.dll
+D:\Workspace\domotica-project\DomoticaProject\DomoticaProject.Android\obj\Debug\80\android\assets\SQLitePCLRaw.lib.e_sqlite3.dll
+D:\Workspace\domotica-project\DomoticaProject\DomoticaProject.Android\obj\Debug\80\android\assets\SQLitePCLRaw.provider.e_sqlite3.dll
 D:\Workspace\domotica-project\DomoticaProject\DomoticaProject.Android\obj\Debug\80\android\assets\System.Core.dll
 D:\Workspace\domotica-project\DomoticaProject\DomoticaProject.Android\obj\Debug\80\android\assets\System.dll
 D:\Workspace\domotica-project\DomoticaProject\DomoticaProject.Android\obj\Debug\80\android\assets\System.Xml.dll
@@ -62,4 +72,5 @@ D:\Workspace\domotica-project\DomoticaProject\DomoticaProject.Android\obj\Debug\
 D:\Workspace\domotica-project\DomoticaProject\DomoticaProject.Android\obj\Debug\80\android\assets\System.Threading.dll
 D:\Workspace\domotica-project\DomoticaProject\DomoticaProject.Android\obj\Debug\80\android\assets\System.Threading.Tasks.dll
 D:\Workspace\domotica-project\DomoticaProject\DomoticaProject.Android\obj\Debug\80\android\assets\System.Text.Encoding.Extensions.dll
+D:\Workspace\domotica-project\DomoticaProject\DomoticaProject.Android\obj\Debug\80\android\assets\System.Resources.ResourceManager.dll
 D:\Workspace\domotica-project\DomoticaProject\DomoticaProject.Android\obj\Debug\80\android\assets\Mono.Security.dll

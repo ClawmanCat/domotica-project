@@ -1,4 +1,5 @@
 ﻿using DomoticaProject.Utility;
+using MoonSharp.Interpreter.Interop;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -6,9 +7,9 @@ using System.Threading;
 
 namespace DomoticaProject.Server {
     public class Command {
-        public string DisplayName { get; set; }
-        public string Description { get; set; }
-        public byte ID;
+        public string DisplayName { [MoonSharpVisible(true)] get; [MoonSharpVisible(false)] set; }
+        public string Description { [MoonSharpVisible(true)] get; [MoonSharpVisible(false)] set; }
+        public byte ID            { [MoonSharpVisible(true)] get; [MoonSharpVisible(false)] set; }
 
         // Print ID formatted as a 3-digit number with a hash symbol preceding it.
         public string FormattedID {

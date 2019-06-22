@@ -133,6 +133,7 @@ namespace DomoticaProject.Server {
         }
 
         public bool IsConnected() {
+            // TODO: ping server to check.
             return socket.Connected;
         }
 

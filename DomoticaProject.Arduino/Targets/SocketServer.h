@@ -19,7 +19,7 @@ struct SocketServer : public IArduinoTarget<SocketServer> {
         Ethernet.begin((byte*) MAC_ADDRESS);
         server.begin();
 
-        GSerial.print("Initialized socket server at ");
+        GSerial.print(F("Initialized socket server at "));
         GSerial.println(Ethernet.localIP());
 
         //AttRegistry.init();
@@ -29,7 +29,7 @@ struct SocketServer : public IArduinoTarget<SocketServer> {
         EthernetClient client = server.available();
 
         if (client) {
-            GSerial.print("Client connected from ");
+            GSerial.print(F("Client connected from "));
             GSerial.println(client.remoteIP());
 
             // Message is made up as follows:
@@ -50,10 +50,10 @@ struct SocketServer : public IArduinoTarget<SocketServer> {
                 } while (client.connected() && !(size > 6 && MsgBuffer[size - 1] == '\0'));
 
                 if (size < 7) {
-                    GSerial.println("<Received corrupt or invalid message>");
+                    GSerial.println(F("<Received corrupt or invalid message>"));
                     return;
                 } else {
-                    GSerial.print("Received message from ");
+                    GSerial.print(F("Received message from "));
                     GSerial.print(client.remoteIP());
                     GSerial.println(": ");
                     
@@ -76,16 +76,18 @@ struct SocketServer : public IArduinoTarget<SocketServer> {
                 GSerial.printf("Running local command %i\n", msg->port);
 
                 // Handle as local command.
-                String response = CommandHandler.HandleCommand(*msg);
+                SafeCString response = CommandHandler.HandleCommand(*msg);
 
                 // Add message ID to response.
                 // Length = string length + null terminator + 4 bytes of message ID.
-                byte* binresponse = new byte[response.length() + 5];
+                byte len = strlen(response.raw_ptr());
+
+                byte* binresponse = new byte[len + 5];
                 memcpy(binresponse, &((*msg).MessageID), 4);
-                memcpy(binresponse + 4, response.c_str(), response.length() + 1);
+                memcpy(binresponse + 4, response.raw_ptr(), len + 1);
 
                 // Send response.
-                client.write(binresponse, response.length() + 5);
+                client.write(binresponse, len + 5);
 
                 delete[] binresponse;
             } else {
