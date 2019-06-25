@@ -5,11 +5,11 @@
 */
 
 // Insert the name of the target here:
-#define SRC SocketServer
+#define SRC ArduinoServer
 
 
 #define STRFY(x) #x
-#define INC_F(x) STRFY(Targets/x.h)
+#define INC_F(x) STRFY(x.h)
 #include INC_F(SRC)
 
 void setup() {

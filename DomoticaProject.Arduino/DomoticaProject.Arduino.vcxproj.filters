@@ -1,886 +1,902 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{5f9f5ce8-e044-4b5e-9005-6b5e3fbe9870}</UniqueIdentifier>
     </Filter>
     <Filter Include="Targets">
-      <UniqueIdentifier>{0ebcc0b1-0ac4-480b-b60d-1025dd1849b0}</UniqueIdentifier>
+      <UniqueIdentifier>{2e6ccb5f-51e1-4aa2-9685-2a3a4fe71c7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Targets\Server">
+      <UniqueIdentifier>{3478aee7-9dd8-4a84-ba27-0c6a2aef6b14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Targets\Client">
+      <UniqueIdentifier>{1b80541f-e3bc-4f8f-bfea-974ed5cf8caa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Targets\External">
+      <UniqueIdentifier>{d7a38bc5-84b3-499d-8ed5-3d2c65cab0b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Targets\Shared">
+      <UniqueIdentifier>{b5c88cc3-228f-47aa-af32-7b719d80feb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ported Dependencies">
+      <UniqueIdentifier>{39903517-b610-43e9-b00e-3f2156b1912c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ported Dependencies\boost">
+      <UniqueIdentifier>{7b88abca-b424-4b04-b65a-d644e3a2d5cf}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="__vm\.DomoticaProject.Arduino.vsarduino.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Unique.h">
+      <Filter>Utility</Filter>
     </ClInclude>
-    <ClInclude Include="Targets\VMTest.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Vector.h">
+      <Filter>Utility</Filter>
     </ClInclude>
-    <ClInclude Include="Targets\SocketServer.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Move.h">
+      <Filter>Utility</Filter>
     </ClInclude>
-    <ClInclude Include="Shared\AttachableRegistry.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="__vm\.DomoticaProject.Arduino.vsarduino.h" />
+    <ClInclude Include="MagicEnum.h">
+      <Filter>Utility</Filter>
     </ClInclude>
-    <ClInclude Include="Targets\IArduinoTarget.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="ProgmemUtils.h">
+      <Filter>Utility</Filter>
     </ClInclude>
-    <ClInclude Include="Shared\GlobalSerial.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="ArduinoTest.h">
+      <Filter>Targets\External</Filter>
     </ClInclude>
-    <ClInclude Include="Server\ServerCommandHandler.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="IArduinoTarget.h">
+      <Filter>Targets</Filter>
     </ClInclude>
-    <ClInclude Include="Shared\MagicEnum.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="GlobalSerial.h">
+      <Filter>Utility</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="ArduinoServer.h">
+      <Filter>Targets\Server</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\arithmetic\detail\div_base.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="EthernetMessage.h">
+      <Filter>Targets\Server</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\arithmetic\add.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="CommandHandler.h">
+      <Filter>Targets\Server</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\arithmetic\dec.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="DataType.h">
+      <Filter>Utility</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\arithmetic\div.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\arithmetic\add.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\arithmetic\inc.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\list\adt.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\arithmetic\mod.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\logical\and.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\arithmetic\mul.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\list\append.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\arithmetic\sub.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\facilities\apply.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\array\detail\get_data.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\arithmetic.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\array\data.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\array.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\array\elem.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\debug\assert.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\array\enum.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\assert_msg.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\array\insert.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\list\at.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\array\pop_back.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\detail\dmc\auto_rec.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\array\pop_front.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\detail\auto_rec.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\array\push_back.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\seq\detail\binary_transform.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\array\push_front.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\logical\bitand.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\array\remove.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\logical\bitnor.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\array\replace.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\logical\bitor.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\array\reverse.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\logical\bitxor.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\array\size.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\logical\bool.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\array\to_list.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\cat.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\array\to_seq.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\seq\cat.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\array\to_tuple.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\list\cat.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\comparison\equal.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\detail\check.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\comparison\greater.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\comma.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\comparison\greater_equal.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\punctuation\comma.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\comparison\less.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\punctuation\comma_if.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\comparison\less_equal.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\comma_if.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\comparison\not_equal.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\comparison.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\config\config.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\logical\compl.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\config\limits.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\config\config.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\control\detail\dmc\while.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\control.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\control\detail\edg\while.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\slot\detail\counter.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\control\detail\msvc\while.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\slot\counter.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\control\detail\while.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\array\data.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\control\deduce_d.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\debug.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\control\expr_if.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\arithmetic\dec.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\control\expr_iif.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\dec.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\control\if.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\control\deduce_d.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\control\iif.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\repetition\deduce_r.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\control\while.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\repetition\deduce_z.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\debug\assert.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\slot\detail\def.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\debug\error.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\arithmetic\div.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\debug\line.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\tuple\eat.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\detail\dmc\auto_rec.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\array\elem.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\detail\auto_rec.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\seq\elem.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\detail\check.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\tuple\elem.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\detail\is_binary.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\variadic\elem.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\detail\is_nullary.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\empty.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\detail\is_unary.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\facilities\empty.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\detail\null.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\enum.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\detail\split.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\list\enum.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\facilities\detail\is_empty.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\seq\enum.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\facilities\apply.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\tuple\enum.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\facilities\empty.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\repetition\enum.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\facilities\expand.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\array\enum.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\facilities\identity.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\repetition\enum_binary_params.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\facilities\intercept.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\repetition\enum_params.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\facilities\is_1.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\enum_params.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\facilities\is_empty.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\enum_params_with_a_default.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\facilities\is_empty_or_1.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\repetition\enum_params_with_a_default.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\facilities\is_empty_variadic.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\enum_params_with_defaults.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\facilities\overload.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\repetition\enum_params_with_defaults.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\iteration\detail\bounds\lower1.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\enum_shifted.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\iteration\detail\bounds\lower2.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\repetition\enum_shifted.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\iteration\detail\bounds\lower3.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\repetition\enum_shifted_binary_params.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\iteration\detail\bounds\lower4.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\repetition\enum_shifted_params.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\iteration\detail\bounds\lower5.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\enum_shifted_params.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\iteration\detail\bounds\upper1.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\repetition\enum_trailing.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\iteration\detail\bounds\upper2.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\repetition\enum_trailing_binary_params.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\iteration\detail\bounds\upper3.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\repetition\enum_trailing_params.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\iteration\detail\bounds\upper4.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\comparison\equal.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\iteration\detail\bounds\upper5.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\debug\error.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\iteration\detail\iter\forward1.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\expand.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\iteration\detail\iter\forward2.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\facilities\expand.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\iteration\detail\iter\forward3.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\control\expr_if.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\iteration\detail\iter\forward4.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\expr_if.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\iteration\detail\iter\forward5.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\control\expr_iif.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\iteration\detail\iter\reverse1.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\facilities.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\iteration\detail\iter\reverse2.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\list\filter.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\iteration\detail\iter\reverse3.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\seq\filter.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\iteration\detail\iter\reverse4.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\iteration\detail\finish.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\iteration\detail\iter\reverse5.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\seq\first_n.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\iteration\detail\finish.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\list\first_n.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\iteration\detail\local.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\list\detail\edg\fold_left.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\iteration\detail\rlocal.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\list\fold_left.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\iteration\detail\self.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\seq\fold_left.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\iteration\detail\start.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\list\detail\dmc\fold_left.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\iteration\iterate.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\list\detail\fold_left.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\iteration\local.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\list\fold_right.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\iteration\self.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\list\detail\edg\fold_right.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\list\detail\dmc\fold_left.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\list\detail\fold_right.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\list\detail\edg\fold_left.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\seq\fold_right.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\list\detail\edg\fold_right.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\repetition\detail\for.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\list\detail\fold_left.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\repetition\detail\edg\for.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\list\detail\fold_right.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\for.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\list\adt.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\repetition\for.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\list\append.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\repetition\detail\msvc\for.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\list\at.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\repetition\detail\dmc\for.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\list\cat.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\seq\for_each.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\list\enum.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\list\for_each.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\list\filter.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\seq\for_each_i.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\list\first_n.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\list\for_each_i.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\list\fold_left.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\seq\for_each_product.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\list\fold_right.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\list\for_each_product.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\list\for_each.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\iteration\detail\iter\forward1.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\list\for_each_i.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\iteration\detail\iter\forward2.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\list\for_each_product.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\iteration\detail\iter\forward3.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\list\rest_n.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\iteration\detail\iter\forward4.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\list\reverse.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\iteration\detail\iter\forward5.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\list\size.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\array\detail\get_data.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\list\to_array.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\comparison\greater.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\list\to_seq.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\comparison\greater_equal.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\list\to_tuple.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\identity.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\list\transform.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\facilities\identity.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\logical\and.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\if.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\logical\bitand.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\control\if.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\logical\bitnor.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\control\iif.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\logical\bitor.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\arithmetic\inc.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\logical\bitxor.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\inc.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\logical\bool.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\seq\insert.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\logical\compl.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\tuple\insert.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\logical\nor.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\array\insert.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\logical\not.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\facilities\intercept.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\logical\or.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\facilities\is_1.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\logical\xor.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\punctuation\is_begin_parens.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\punctuation\detail\is_begin_parens.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\punctuation\detail\is_begin_parens.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\punctuation\comma.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\detail\is_binary.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\punctuation\comma_if.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\facilities\is_empty.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\punctuation\is_begin_parens.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\facilities\detail\is_empty.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\punctuation\paren.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\seq\detail\is_empty.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\punctuation\paren_if.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\facilities\is_empty_or_1.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\punctuation\remove_parens.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\facilities\is_empty_variadic.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\repetition\detail\dmc\for.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\detail\is_nullary.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\repetition\detail\edg\for.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\variadic\detail\is_single_return.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\repetition\detail\msvc\for.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\tuple\detail\is_single_return.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\repetition\detail\for.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\detail\is_unary.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\repetition\deduce_r.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\iteration\iterate.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\repetition\deduce_z.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\iterate.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\repetition\enum.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\iteration.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\repetition\enum_binary_params.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\comparison\less.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\repetition\enum_params.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\comparison\less_equal.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\repetition\enum_params_with_a_default.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\library.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\repetition\enum_params_with_defaults.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\limits.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\repetition\enum_shifted.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\config\limits.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\repetition\enum_shifted_binary_params.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\debug\line.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\repetition\enum_shifted_params.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\list.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\repetition\enum_trailing.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\iteration\local.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\repetition\enum_trailing_binary_params.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\iteration\detail\local.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\repetition\enum_trailing_params.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\logical.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\repetition\for.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\iteration\detail\bounds\lower1.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\repetition\repeat.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\iteration\detail\bounds\lower2.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\repetition\repeat_from_to.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\iteration\detail\bounds\lower3.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\selection\max.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\iteration\detail\bounds\lower4.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\selection\min.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\iteration\detail\bounds\lower5.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\seq\detail\binary_transform.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\selection\max.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\seq\detail\is_empty.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\max.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\seq\detail\split.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\min.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\seq\detail\to_list_msvc.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\selection\min.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\seq\cat.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\arithmetic\mod.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\seq\elem.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\arithmetic\mul.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\seq\enum.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\logical\nor.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\seq\filter.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\logical\not.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\seq\first_n.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\comparison\not_equal.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\seq\fold_left.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\detail\null.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\seq\fold_right.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\logical\or.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\seq\for_each.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\facilities\overload.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\seq\for_each_i.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\punctuation\paren.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\seq\for_each_product.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\punctuation\paren_if.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\seq\insert.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\array\pop_back.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\seq\pop_back.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\tuple\pop_back.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\seq\pop_front.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\seq\pop_back.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\seq\push_back.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\seq\pop_front.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\seq\push_front.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\tuple\pop_front.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\seq\remove.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\array\pop_front.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\seq\replace.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\seq\rest_n.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\punctuation.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\seq\reverse.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\seq\push_back.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\seq\seq.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\tuple\push_back.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\seq\size.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\array\push_back.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\seq\subseq.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\tuple\push_front.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\seq\to_array.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\seq\push_front.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\seq\to_list.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\array\push_front.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\seq\to_tuple.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\tuple\rem.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\seq\transform.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\array\remove.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\seq\variadic_seq_to_seq.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\seq\remove.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\slot\detail\counter.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\tuple\remove.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\slot\detail\def.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\punctuation\remove_parens.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\slot\detail\shared.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\repeat.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\slot\detail\slot1.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\repetition\repeat.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\slot\detail\slot2.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\repeat_2nd.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\slot\detail\slot3.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\repeat_3rd.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\slot\detail\slot4.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\repeat_from_to.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\slot\detail\slot5.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\repetition\repeat_from_to.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\slot\counter.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\repeat_from_to_2nd.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\slot\slot.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\repeat_from_to_3rd.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\tuple\detail\is_single_return.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\repetition.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\tuple\eat.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\array\replace.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\tuple\elem.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\seq\replace.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\tuple\enum.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\tuple\replace.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\tuple\insert.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\seq\rest_n.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\tuple\pop_back.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\list\rest_n.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\tuple\pop_front.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\array\reverse.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\tuple\push_back.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\list\reverse.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\tuple\push_front.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\tuple\reverse.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\tuple\rem.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\seq\reverse.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\tuple\remove.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\iteration\detail\iter\reverse1.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\tuple\replace.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\iteration\detail\iter\reverse2.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\tuple\reverse.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\iteration\detail\iter\reverse3.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\tuple\size.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\iteration\detail\iter\reverse4.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\tuple\to_array.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\iteration\detail\iter\reverse5.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\tuple\to_list.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\iteration\detail\rlocal.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\tuple\to_seq.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\selection.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\variadic\detail\is_single_return.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\iteration\self.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\variadic\elem.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\iteration\detail\self.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\variadic\size.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\seq.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\variadic\to_array.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\seq\seq.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\variadic\to_list.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\slot\detail\shared.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\variadic\to_seq.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\list\size.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\variadic\to_tuple.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\tuple\size.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\arithmetic.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\variadic\size.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\array.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\seq\size.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\assert_msg.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\array\size.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\cat.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\slot.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\comma.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\slot\slot.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\comma_if.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\slot\detail\slot1.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\comparison.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\slot\detail\slot2.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\control.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\slot\detail\slot3.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\debug.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\slot\detail\slot4.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\dec.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\slot\detail\slot5.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\empty.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\seq\detail\split.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\enum.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\detail\split.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\enum_params.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\iteration\detail\start.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\enum_params_with_a_default.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\stringize.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\enum_params_with_defaults.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\arithmetic\sub.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\enum_shifted.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\seq\subseq.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\enum_shifted_params.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\seq\to_array.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\expand.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\tuple\to_array.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\expr_if.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\variadic\to_array.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\facilities.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\list\to_array.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\for.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\tuple\to_list.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\identity.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\seq\to_list.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\if.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\array\to_list.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\inc.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\variadic\to_list.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\iterate.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\seq\detail\to_list_msvc.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\iteration.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\list\to_seq.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\library.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\variadic\to_seq.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\limits.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\tuple\to_seq.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\list.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\array\to_seq.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\logical.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\list\to_tuple.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\max.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\array\to_tuple.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\min.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\seq\to_tuple.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\punctuation.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\variadic\to_tuple.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\repeat.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\seq\transform.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\repeat_2nd.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\list\transform.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\repeat_3rd.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\tuple.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\repeat_from_to.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\iteration\detail\bounds\upper1.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\repeat_from_to_2nd.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\iteration\detail\bounds\upper2.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\repeat_from_to_3rd.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\iteration\detail\bounds\upper3.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\repetition.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\iteration\detail\bounds\upper4.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\selection.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\iteration\detail\bounds\upper5.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\seq.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\variadic.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\slot.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\seq\variadic_seq_to_seq.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\stringize.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\control\while.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\tuple.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\control\detail\dmc\while.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\variadic.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\while.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\while.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\control\detail\edg\while.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\boost\preprocessor\wstringize.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\control\detail\while.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Server\Message.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\control\detail\msvc\while.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Targets\BinOpener.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\wstringize.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Shared\Vector.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\logical\xor.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Shared\Unique.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="boost\preprocessor\arithmetic\detail\div_base.hpp">
+      <Filter>Ported Dependencies\boost</Filter>
     </ClInclude>
-    <ClInclude Include="Shared\ProgmemUtils.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="AttachableRegistry.h">
+      <Filter>Targets\Shared</Filter>
     </ClInclude>
+    <ClInclude Include="RFManager.h">
+      <Filter>Targets\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="RFMessage.h">
+      <Filter>Targets\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="ArduinoClient.h">
+      <Filter>Targets\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerDevices.h">
+      <Filter>Targets\Server</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DomoticaProject.Arduino.cpp" />
+    <ClCompile Include="ArduinoServer.cpp">
+      <Filter>Targets\Server</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="DomoticaProject.Arduino.ino" />
-    <None Include="DomoticaProject.Arduino.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Targets\SocketServer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Targets\BinOpener.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="Dependencies\README.txt" />
   </ItemGroup>
 </Project>

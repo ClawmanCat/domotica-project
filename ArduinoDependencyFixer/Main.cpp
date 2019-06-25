@@ -50,7 +50,7 @@ void iterate(std::filesystem::path dpath, int depth = 0) {
             std::vector<std::string> file = ReadFile(entry.path().string());
 
             int ln = -1;
-            std::regex rgx{ R"(#\s*include\s*"Dependencies/boost/(.+)\.hpp")" };
+            std::regex rgx{ R"(#\s*include\s*<boost/(.+)\.hpp>)" };
             for (std::string& line : file) {
                 ++ln;
                 std::smatch match;
@@ -59,11 +59,11 @@ void iterate(std::filesystem::path dpath, int depth = 0) {
                 std::vector<char> newline;
                 newline.resize(line.length() + 3 * depth + 1);
 
-                std::string res = "# include \"";
+                std::string res = "# include <";
                 for (int i = 0; i < depth; ++i) res += "../";
-                res += "Dependencies/boost/";
+                res += "boost/";
                 res += match[1];
-                res += ".hpp\"";
+                res += ".hpp>";
 
                 std::regex_replace(newline.begin(), line.begin(), line.end(), rgx, res);
                 std::cout << "Replaced line " << ln << " in file " << entry.path().string() << std::endl;

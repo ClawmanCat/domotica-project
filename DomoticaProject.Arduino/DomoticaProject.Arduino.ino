@@ -1,4 +1,4 @@
-﻿/*
+/*
     This file is required for Visual Micro to work.
     Please do not write anything here.
 */
