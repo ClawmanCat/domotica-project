@@ -79,7 +79,7 @@ private:
 
     SafeCString HC_GET_FANCY_NAME(EthernetMessage& msg) {
         unsigned long i = atoi(msg.data.raw_ptr());
-        if (i > NumFancyCommandNames) return ProgmemUtils::ReadProgmemString(CommandResponses, 1);
+        if (!IsNumber(msg.data) || i > NumFancyCommandNames) return ProgmemUtils::ReadProgmemString(CommandResponses, 1);
 
         return ProgmemUtils::ReadProgmemString(FancyCommandNames, i);
     }
@@ -97,5 +97,23 @@ private:
 
     SafeCString HC_LIST_ATTACHABLES(EthernetMessage& msg) {
         return AttRegistry.ListAttachables();
+    }
+
+
+    static bool IsNumber(SafeCString& str, bool p = true) {
+        const static char DIGITS[] = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+
+        if (strlen(str.raw_ptr()) == 0) return false;
+
+        for (byte i = 0; i < strlen(str.raw_ptr()); ++i) {
+            bool found = false;
+            for (byte j = 0; j < 10; ++j) {
+                if (str[i] == DIGITS[j]) found = true;
+            }
+
+            if (!found) return false;
+        }
+
+        return true;
     }
 };
