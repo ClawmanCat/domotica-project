@@ -27,5 +27,23 @@ namespace DomoticaProject.Lua.API {
 
             return response;
         }
+
+
+        public static List<ArduinoAttachable> GetAttachables() {
+            if (App.ArduinoConnection == null) throw new ConnectionException("No connection to Arduino has been established.");
+
+            var response = App.ArduinoConnection.AttachableManager.GetAttachables();
+            if (response == null) throw new ConnectionException("Failed to get attachable list: request timed out after 2500 ms.");
+
+            List<ArduinoAttachable> result = new List<ArduinoAttachable>();
+            foreach (ArduinoAttachable a in response) result.Add(a);
+
+            return result;
+        }
+
+
+        public static string ExecuteOnAttachable(ArduinoAttachable a, string args) {
+            return App.ArduinoConnection.AttachableManager.RunAttachable(a, args);
+        }
     }
 }

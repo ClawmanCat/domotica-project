@@ -10,6 +10,10 @@ using Xamarin.Forms;
 [assembly: Dependency(typeof(DomoticaProject.iOS.FileAccessProvider))]
 namespace DomoticaProject.iOS {
     class FileAccessProvider : IFileAccess {
+        public string[] ListFiles(string folder) {
+            throw new NotImplementedException();
+        }
+
         public byte[] ReadFromFile(string file) {
             throw new NotImplementedException();
         }

@@ -25,3 +25,5 @@ D:\Workspace\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstand
 D:\Workspace\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\MVVM\LoggerPage.xaml.g.cs
 D:\Workspace\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\MVVM\OpenLuaPage.xaml.g.cs
 D:\Workspace\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\XamlC.stamp
+D:\Workspace\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\MVVM\AddAliasPage.xaml.g.cs
+D:\Workspace\domotica-project\DomoticaProject\DomoticaProject\obj\Debug\netstandard2.0\MVVM\AttachableAliasingPage.xaml.g.cs

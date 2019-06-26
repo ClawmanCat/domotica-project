@@ -72,8 +72,9 @@ struct ArduinoServer : public IArduinoTarget<ArduinoServer> {
                 );
             }
 
-            GSerial.printf("Received message from client: dest=%i:%i", msg->device, msg->index);
-            GSerial.println(msg->data.raw_ptr());
+            GSerial.printf("Received message from client: dest=%i:%i\n", msg->device, msg->index);
+            for (byte i = 0; i < strlen(msg->data.raw_ptr()) + 1; ++i) GSerial.printf("0x%02.2x ", msg->data[i]);
+            GSerial.println();
 
             // Message has been received, now run the appropriate command or dispatch to an attachable.
             SafeCString response = nullptr;

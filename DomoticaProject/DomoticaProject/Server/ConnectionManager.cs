@@ -1,4 +1,5 @@
-﻿using DomoticaProject.Utility;
+﻿using DomoticaProject.MVVM;
+using DomoticaProject.Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Timers;
+using Xamarin.Forms;
 using Timer = System.Timers.Timer;
 
 namespace DomoticaProject.Server {
@@ -16,6 +18,7 @@ namespace DomoticaProject.Server {
         public delegate void OnAnswerTimeout();                     // Called when no response is received to a message within the timeout period.
 
         public readonly ServerCommandManager CommandManager;
+        public readonly ServerAttachableManager AttachableManager;
 
         private Thread thread;
         private bool ShouldShutdown;
@@ -30,6 +33,7 @@ namespace DomoticaProject.Server {
 
         public ConnectionManager(IPAddress address, int port) {
             this.CommandManager = new ServerCommandManager(this);
+            this.AttachableManager = new ServerAttachableManager(this);
 
             this.address = address;
             this.port = port;
@@ -68,6 +72,7 @@ namespace DomoticaProject.Server {
                         byte[] ResponseArray = response.ToArray();
                         int ID     = BitConverter.ToInt32(ResponseArray, 0);
                         string msg = Encoding.ASCII.GetString(ResponseArray.Subset(4, ResponseArray.Count() - 4).ToArray());
+                        if (msg.Last() == '\0') msg = msg.Substring(0, msg.Length - 1);
 
                         // Find the associated message and perform callbacks.
                         if (AwaitedAnswers.TryGetValue(ID, out (OnAnswerReceived, OnAnswerTimeout) value)) {
@@ -81,7 +86,16 @@ namespace DomoticaProject.Server {
             });
 
             thread.Start();
-            socket.BeginConnect(new IPEndPoint(address, port), null, null);
+            socket.BeginConnect(
+                new IPEndPoint(address, port), 
+                (IAsyncResult r) => {
+                    Device.BeginInvokeOnMainThread(() => {
+                        // Load aliases as soon as there's a connection.
+                        AttachableAliasingPage.instance.init();
+                    });
+                },
+                null
+            );
         }
 
         public void SendMessage(byte device, byte port, string message, OnAnswerReceived OnReceived, OnAnswerTimeout OnTimeout, TimeSpan timeout) {

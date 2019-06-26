@@ -96,6 +96,7 @@
     <OutputPath>bin\iPhone\ADF\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DBProvider.cs" />
     <Compile Include="FileAccessProvider.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />

@@ -399,6 +399,7 @@
     <ClInclude Include="EthernetMessage.h" />
     <ClInclude Include="GlobalSerial.h" />
     <ClInclude Include="IArduinoTarget.h" />
+    <ClInclude Include="IsNumber.h" />
     <ClInclude Include="MagicEnum.h" />
     <ClInclude Include="Move.h" />
     <ClInclude Include="ProgmemUtils.h" />

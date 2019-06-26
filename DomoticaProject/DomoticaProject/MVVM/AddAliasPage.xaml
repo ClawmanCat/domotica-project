@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DomoticaProject.MVVM.AddAliasPage">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+               <Label Text="Current alias: " HorizontalOptions="Center"></Label>
+               <Entry HorizontalOptions="Center" WidthRequest="256" Placeholder="No alias set." Text="{Binding CurrentAlias}" x:Name="AliasEntry"></Entry>
+
+               <Button Text="Done" WidthRequest="128" HorizontalOptions="Center" Margin="10" Clicked="DoneClicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -72,6 +72,7 @@
     <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="26.1.0.1" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBProvider.cs" />
     <Compile Include="FileAccessProvider.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />

@@ -4,6 +4,7 @@
 #include "AttachableRegistry.h"
 #include "ProgmemUtils.h"
 #include "RFManager.h"
+#include "IsNumber.h"
 
 MAKE_PROGMEM_STRING_ARRAY(
     ServerDeviceStrings,
@@ -31,7 +32,11 @@ public:
                 for (byte i = 0; i < 6; ++i) pinMode(ServerDevices::GetLEDPins()[i], OUTPUT);
             },
             [](Attachable* thisptr, SafeCString&& msg) {
-                byte state = ((byte) *msg.raw_ptr());
+                if (!IsNumber(msg)) return SafeCString::FromCopy("NO", 3);
+
+                char* end = nullptr;
+                byte state = (byte) strtol(msg.raw_ptr(), &end, 10);
+
                 for (byte i = 0; i < 6; ++i) digitalWrite(ServerDevices::GetLEDPins()[i], state & (1 << i) ? HIGH : LOW);
                 return SafeCString::FromCopy("OK", 3);
             },

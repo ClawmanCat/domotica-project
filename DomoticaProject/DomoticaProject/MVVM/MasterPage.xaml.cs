@@ -36,6 +36,13 @@ namespace DomoticaProject.MVVM {
             },
 
             new MenuItem {
+                Icon = Convert.ToChar(0xF0E8).ToString(),
+                Text = "Aliasing",
+                OnClicked  = () => { return AttachableAliasingPage.instance; },
+                ShouldShow = () => { return App.ArduinoConnection?.IsConnected() ?? false; }
+            },
+
+            new MenuItem {
                 Icon = Convert.ToChar(0xF969).ToString(),
                 Text = "Logs",
                 OnClicked  = () => { return LoggerPage.instance; },

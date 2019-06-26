@@ -889,6 +889,9 @@
     <ClInclude Include="ServerDevices.h">
       <Filter>Targets\Server</Filter>
     </ClInclude>
+    <ClInclude Include="IsNumber.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DomoticaProject.Arduino.cpp" />

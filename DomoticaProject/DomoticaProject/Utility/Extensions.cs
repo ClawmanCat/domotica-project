@@ -40,5 +40,15 @@ namespace DomoticaProject.Utility {
             Regex r = new Regex(regex);
             return r.Match(str).Success;
         }
+
+        // Remove trailing empty strings from string array.
+        public static List<string> PopBackEmptyStrings(this List<string> strs) {
+            for (int i = strs.Count() - 1; i >= 0; --i) {
+                if (string.IsNullOrEmpty(strs[i])) strs.RemoveAt(i);
+                else continue;
+            }
+
+            return strs;
+        }
     }
 }

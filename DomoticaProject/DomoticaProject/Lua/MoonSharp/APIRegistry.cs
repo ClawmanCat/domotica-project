@@ -8,9 +8,13 @@ using DomoticaProject.Server;
 
 namespace DomoticaProject.Lua.MoonSharp {
     static class APIRegistry {
-        private static List<Type> StaticGlobals = new List<Type>();
-        public static IReadOnlyList<Type> GetStaticGlobals() => StaticGlobals;
+        public delegate string DynamicMethod(string data);
 
+        private static List<Type> StaticGlobals = new List<Type>();
+        private static List<(DynamicMethod, string)> DynMethods = new List<(DynamicMethod, string)>();
+
+        public static IReadOnlyList<Type> GetStaticGlobals() => StaticGlobals;
+        public static IReadOnlyList<(DynamicMethod, string)> GetDynMethods() => DynMethods;
 
         public static void RegisterAll() {
             Script.GlobalOptions.RethrowExceptionNested = true;
@@ -25,6 +29,16 @@ namespace DomoticaProject.Lua.MoonSharp {
                 UserData.RegisterType(t);
                 StaticGlobals.Add(t);
             }
+        }
+
+        public static void RegisterMethod(DynamicMethod method, string name) {
+            DynMethods.Add((method, name));
+        }
+
+        public static void RemoveMethod(string name) {
+            DynMethods.RemoveAt(
+                DynMethods.FindIndex(x => x.Item2 == name)    
+            );
         }
     }
 }

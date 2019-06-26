@@ -54,30 +54,7 @@ namespace DomoticaProject.Droid {
         }
 
         private SQLiteConnection GetDBConnection() {
-            var file = "LuaController.db";
-            var path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), file);
-
-            if (!File.Exists(path)) {
-                using (var br = new BinaryReader(Application.Context.Assets.Open(file))) {
-                    using (var bw = new BinaryWriter(new FileStream(path, FileMode.Create))) {
-                        byte[] buffer = new byte[4096];
-                        int len = 0;
-
-                        while ((len = br.Read(buffer, 0, buffer.Length)) > 0) bw.Write(buffer, 0, len);
-                    }
-                }
-            }
-
-            var con = new SQLiteConnection(path, false);
-
-            con.Execute(@"
-                CREATE TABLE IF NOT EXISTS FileStorage (
-                    ID Text PRIMARY KEY NOT NULL UNIQUE,
-                    Contents Blob NOT NULL
-                );
-            ");
-
-            return con;
+            return new DBProvider().Connect();
         }
     }
 }
