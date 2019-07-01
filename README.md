@@ -80,10 +80,10 @@ AttRegistry.RegisterAttachable(
 ```
 
 where \<Number\> is the ID of your client in the network. Client IDs should be:
-   ..+ Unique. (No two clients may have the same ID)
-   ..+ Continuous. (Client IDs should follow each other, e.g. 2, 3, 4, 5 but not 2, 3, 11, 45)
-   ..+ Start at 2.
-   ..+ Be smaller than 127.
+\-Unique. (No two clients may have the same ID)
+\-Continuous. (Client IDs should follow each other, e.g. 2, 3, 4, 5 but not 2, 3, 11, 45)
+\-Start at 2.
+\-Be smaller than 127.
 - Upload the project to the Arduino.
 
 If everything is done correctly, you should now be able to see the attachable on the aliasing page in the app,
