@@ -892,6 +892,9 @@
     <ClInclude Include="IsNumber.h">
       <Filter>Utility</Filter>
     </ClInclude>
+    <ClInclude Include="SimpleLEDClient.h">
+      <Filter>Targets\Client</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DomoticaProject.Arduino.cpp" />

@@ -13,22 +13,20 @@
 
 struct ArduinoServer : public IArduinoTarget<ArduinoServer> {
     const static byte MAC_ADDRESS[6];   // Any address will work, as long as it's not used by a different device in the network.
-    const static byte IP_ADDRESS[4];    // Fallback address if DHCP doesn't work.
+    const static byte IP_ADDRESS[4];    // Fallback address if DHCP doesn't work or when connecting statically.
     const static short PORT;
 
     static EthernetServer server;
 
 
     static void setup(void) {
+        GSerial.println(F("Looking for devices..."));
         ServerDevices::RegisterAll();
+        RF.FetchAttachables();
+        GSerial.printf("Found %i attachables\n", AttRegistry.size());
 
-        // Attempt to use DHCP but use a static address if that fails.
-        if (Ethernet.begin((byte*) MAC_ADDRESS)) {
-            GSerial.println(F("DHCP is supported."));
-        } else {
-            GSerial.println(F("DHCP is not supported. Using fallback address..."));
-            Ethernet.begin((byte*) MAC_ADDRESS, IPAddress(IP_ADDRESS));
-        }
+        // Change to ConnectStatic to always use a static IP address.
+        ConnectDHCP();
 
         server.begin();
 
@@ -68,7 +66,7 @@ struct ArduinoServer : public IArduinoTarget<ArduinoServer> {
                     *((int32_t*) &MsgBuffer[0]),
                     MsgBuffer[4],
                     MsgBuffer[5],
-                    SafeCString::FromCopy((char*) MsgBuffer + 6, strlen((char*) MsgBuffer + 6))
+                    SafeCString::FromCopy((char*) MsgBuffer + 6, strlen((char*) MsgBuffer + 6) + 1)
                 );
             }
 
@@ -97,5 +95,19 @@ struct ArduinoServer : public IArduinoTarget<ArduinoServer> {
             GSerial.printf("Sending response to app... (%i bytes)\n", strlen(response.raw_ptr()) + 5);
             client.write(binresponse.raw_ptr(), strlen(response.raw_ptr()) + 5);
         }
+    }
+private:
+    static void ConnectDHCP(void) {
+        // Attempt to use DHCP but use a static address if that fails.
+        if (Ethernet.begin((byte*) MAC_ADDRESS)) {
+            GSerial.println(F("DHCP is supported."));
+        } else {
+            GSerial.println(F("DHCP is not supported. Using fallback address..."));
+            Ethernet.begin((byte*) MAC_ADDRESS, IPAddress(IP_ADDRESS));
+        }
+    }
+
+    static void ConnectStatic(void) {
+        Ethernet.begin((byte*) MAC_ADDRESS, IPAddress(IP_ADDRESS));
     }
 };

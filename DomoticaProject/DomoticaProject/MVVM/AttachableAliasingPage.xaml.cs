@@ -111,6 +111,12 @@ namespace DomoticaProject.MVVM {
                         },
                         item.Alias
                     );
+
+                    // Save to database
+                    DBUtils.SetAlias(new AtblAlias {
+                        Name = item.Name,
+                        Alias = item.Alias
+                    });
                 }
             ));
         }

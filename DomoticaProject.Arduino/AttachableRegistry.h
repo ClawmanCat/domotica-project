@@ -4,7 +4,7 @@
 #include "MagicEnum.h"
 #include "Vector.h"
 #include "Unique.h"
-#include "DataType.h"
+//#include "DataType.h"
 
 #define AttRegistry AttachableRegistry::instance()
 
@@ -78,6 +78,21 @@ public:
     #endif
 
     #ifdef ClientOnly
+    SafeCString ListAttachables(void) {
+        String result;
+
+        for (Attachable* att : attachables) {
+            result += CLIENT_DEVICE_ID;
+            result += ':';
+            result += att->index;
+            result += ':';
+            result += att->Name.raw_ptr();
+            result += '\n';
+        }
+
+        return SafeCString::FromCopy(result.c_str(), result.length() + 1);
+    }
+
     Attachable* FindAttachable(byte index) {
         for (Attachable* att : attachables) {
             if (att->index == index) return att;
@@ -86,6 +101,10 @@ public:
         return nullptr;
     }
     #endif
+
+    byte size(void) const {
+        return attachables.size();
+    }
 private:
     AttachableRegistry(void) = default;
 

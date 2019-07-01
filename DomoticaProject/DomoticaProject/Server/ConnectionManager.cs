@@ -19,6 +19,7 @@ namespace DomoticaProject.Server {
 
         public readonly ServerCommandManager CommandManager;
         public readonly ServerAttachableManager AttachableManager;
+        private bool ConnectionInitialized = false;
 
         private Thread thread;
         private bool ShouldShutdown;
@@ -49,6 +50,11 @@ namespace DomoticaProject.Server {
             this.thread = new Thread(() => {
                 while (!ShouldShutdown) {
                     if (socket.Connected) {
+                        if (!ConnectionInitialized) {
+                            new Task(() => { AttachableAliasingPage.instance.init(); }).Start();
+                            ConnectionInitialized = true;
+                        }
+
                         mtx.WaitOne();
 
                         // Release mutex if nothing to read.
@@ -86,16 +92,7 @@ namespace DomoticaProject.Server {
             });
 
             thread.Start();
-            socket.BeginConnect(
-                new IPEndPoint(address, port), 
-                (IAsyncResult r) => {
-                    Device.BeginInvokeOnMainThread(() => {
-                        // Load aliases as soon as there's a connection.
-                        AttachableAliasingPage.instance.init();
-                    });
-                },
-                null
-            );
+            socket.BeginConnect(new IPEndPoint(address, port), null, null);
         }
 
         public void SendMessage(byte device, byte port, string message, OnAnswerReceived OnReceived, OnAnswerTimeout OnTimeout, TimeSpan timeout) {

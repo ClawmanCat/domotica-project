@@ -1,7 +1,6 @@
 #pragma once
 
-#include <RH_ASK.h>
-#include <RHMesh.h>
+#include <Wire.h>
 
 #include "RFMessage.h"
 #include "Unique.h"
@@ -9,122 +8,136 @@
 
 #define RF RFManager::instance()
 
+// RF communication is currently not working.
+// We're currently using the wire library instead to communicate via I2C.
+// Unfortunately, this currently isn't working either.
 class RFManager {
 public:
-    #ifdef ServerOnly
-    const static byte MESH_ADDRESS = 1;
-    #else
-    const static byte MESH_ADDRESS = CLIENT_DEVICE_ID;
-    #endif
-
-    const static byte SEND_PIN = 2;
+    const static byte TRNS_PIN = 2;
     const static byte RECV_PIN = 3;
+
+    #ifdef ServerOnly
+    const static byte ADDRESS = 1;
+    #else
+    const static byte ADDRESS = CLIENT_DEVICE_ID;
+    #endif
 
     static RFManager& instance(void) {
         static RFManager i = RFManager();
         return i;
     }
-
-    void SendMessage(RFMessage& msg, byte dest) {
-        UniqueArray<byte> msgbuf = msg.Serialize();
-        byte msglen = strlen(msg.data.raw_ptr()) + 2;
-
-        network.sendtoWait(msgbuf.raw_ptr(), msglen, dest);
-    }
-
-    Unique<RFMessage> SendAndAwaitResponse(RFMessage& msg, byte dest, short timeout) {
-        UniqueArray<byte> msgbuf = msg.Serialize();
-        byte msglen = strlen(msg.data.raw_ptr()) + 2;
-
-        network.sendtoWait(msgbuf.raw_ptr(), msglen, dest);
-
-        msgbuf = new byte[255];
-        msglen = 255;
-
-        if (network.recvfromAckTimeout(msgbuf.raw_ptr(), &msglen, timeout, &dest)) {
-            return Unique<RFMessage>::FromCopy(&RFMessage::Deserialize(msgbuf));
-        } else {
-            return Unique<RFMessage>(nullptr);
-        }
-    }
-
-    RFMessage ListenResponse(byte src) {
-        UniqueArray<byte> msgbuf = new byte[255];
-        byte msglen = 255;
-
-        network.recvfromAck(msgbuf.raw_ptr(), &msglen, &src);
-        return RFMessage::Deserialize(msgbuf);
-    }
-
-
-    RH_ASK& GetDriver(void) {
-        return driver;
-    }
-
-
+    
     #ifdef ServerOnly
+    Unique<RFMessage> RequestResponse(RFMessage& msg, short timeout) {
+        init();
+
+        Wire.beginTransmission(msg.dest);
+        Wire.write(msg.Serialize().raw_ptr(), msg.size());
+        Wire.endTransmission();
+
+        delay(1000);
+
+        Wire.requestFrom(msg.dest, (byte) 255);
+
+        UniqueArray<byte> response = new byte[255];
+        byte count = 0;
+
+        auto start = millis();
+
+        pinMode(42, HIGH);
+        do {
+            if (Wire.available()) response[count++] = Wire.read();
+        } while ((timeout == 0 || start + timeout < millis()) && (count < 5 || response[count - 1] != '\0'));
+        pinMode(42, LOW);
+
+        if (count < 5 || response[count - 1] != '\0') return Unique<RFMessage>(nullptr);
+        return Unique<RFMessage>::FromCopy(&RFMessage::Deserialize(response));
+    }
+
+    SafeCString RequestAttachable(byte device, byte index, SafeCString&& data) {
+        RFMessage msg = RFMessage(ADDRESS, device, index, move(data));
+        auto m = RequestResponse(msg, 2500);
+
+        if (m.raw_ptr() == nullptr) return SafeCString::FromCopy("ERROR", 6);
+        return move(m->data);
+    }
+
     void FetchAttachables(void) {
-        bool done = false;
         byte next = 2;
+        bool done = false;
 
         while (!done) {
-            RFMessage msg = RFMessage(0, SafeCString::FromCopy("REQ_ATH", 8));
+            RFMessage msg = RFMessage(ADDRESS, next, 0, SafeCString::FromCopy("", 1));
+            auto m = RequestResponse(msg, 2500);
 
-            Unique<RFMessage> response = SendAndAwaitResponse(
-                msg,
-                next,
-                1000
-            );
-
-            if (response.raw_ptr() == nullptr) {
+            if (m.raw_ptr() == nullptr) {
                 done = true;
-                continue;
+            } else {
+                AttRegistry.RegisterAttachable(new Attachable(
+                    [](Attachable* thisptr) {},
+                    [](Attachable* thisptr, SafeCString&& data) {
+                        return RF.RequestAttachable(thisptr->device, thisptr->index, move(data));
+                    },
+                    move(m->data),
+                    m->src,
+                    m->index
+                ));
+
+                ++next;
             }
-
-            AttRegistry.RegisterAttachable(new Attachable(
-                [](Attachable* thisptr) {},
-                [](Attachable* thisptr, SafeCString&& msg) {
-                    return RF.RequestAttachableAction(thisptr->device, thisptr->index, move(msg));
-                },
-                SafeCString::FromCopy((char*) response->data.raw_ptr() + 2, strlen((char*) response->data.raw_ptr() + 2)),
-                next,
-                (byte) *(response->data.raw_ptr() + 1)
-            ));
-
-            ++next;
-        }
-    }
-
-    SafeCString RequestAttachableAction(byte dest, byte index, SafeCString&& data) {
-        RFMessage msg = RFMessage(index, move(data));
-        Unique<RFMessage> response = SendAndAwaitResponse(msg, dest, 1000);
-
-        if (response.raw_ptr() == nullptr) {
-            return SafeCString(nullptr);
-        } else {
-            return move(response->data);
         }
     }
     #endif
 
     #ifdef ClientOnly
-    void HandleClientRequest(void) {
-        RFMessage request = ListenResponse(1);
+    void Respond(RFMessage& msg) {
+        init();
+        Wire.beginTransmission(0);
+        Wire.write(msg.Serialize().raw_ptr(), msg.size());
+        Wire.endTransmission();
+    }
 
-        if (strcmp((char*) request.data.raw_ptr(), "REQ_ATH") == 0) {
-            SendMessage(
-                RFMessage(0, AttRegistry.ListAttachables()),
-                1
-            );
+    void HandleClientRequest(Unique<RFMessage>& msg) {
+        Unique<RFMessage>& m = msg;
+
+        if (m->index == 0) {
+            // Request attachables.
+            RFMessage msg = RFMessage(ADDRESS, 1, 0, AttRegistry.ListAttachables());
+            Respond(msg);
         } else {
-            Attachable* a = AttRegistry.FindAttachable(request.index);
-            a->CallCallback(a, move(request.data));
+            // Run attachable.
+            Attachable* a = AttRegistry.FindAttachable(m->index);
+
+            RFMessage msg = RFMessage(ADDRESS, 1, 0, a->CallCallback(a, move(m->data)));
+            Respond(msg);
         }
     }
     #endif
-private:
-    RFManager(void) : driver(2000, RECV_PIN, SEND_PIN), network(driver, MESH_ADDRESS) {}
 
-    RH_ASK driver;
-    RHMesh network;
+    RFManager(void) {}
+
+    #ifdef ClientOnly
+    byte reqbuf[127];
+    #endif
+
+    void init(void) {
+        static bool inited = false;
+        if (inited) return;
+
+        ADDRESS == 1 ? Wire.begin() : Wire.begin(ADDRESS);
+
+        #ifdef ClientOnly
+        Wire.onReceive([](int) {
+            byte i = 0;
+            while (Wire.available()) RF.reqbuf[i++] = Wire.read();
+        });
+
+        Wire.onRequest([]() {
+            Unique<RFMessage> msg = Unique<RFMessage>::FromCopy(&RFMessage::Deserialize(RF.reqbuf));
+            RF.HandleClientRequest(msg);
+        });
+        #endif
+
+        inited = true;
+    }
 };

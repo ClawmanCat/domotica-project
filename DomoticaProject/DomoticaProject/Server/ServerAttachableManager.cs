@@ -28,7 +28,7 @@ namespace DomoticaProject.Server {
 
         public IReadOnlyList<ArduinoAttachable> GetAttachables() {
             if (IsOutdated) {
-                Command GetAttachablesCmd = ((IEnumerable<Command>) connection.CommandManager.GetEnabledCommands(TimeSpan.FromMilliseconds(2500)))
+                Command GetAttachablesCmd = ((IEnumerable<Command>) connection.CommandManager.GetEnabledCommands(TimeSpan.FromMilliseconds(5000)))
                     .Where(x => x.DisplayName == "LIST_ATTACHABLES")
                     .FirstOrDefault();
 

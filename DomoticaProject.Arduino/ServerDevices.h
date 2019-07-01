@@ -47,7 +47,7 @@ public:
 
 
         // RF Transmitter
-        AttRegistry.RegisterAttachable(new Attachable(
+        /*AttRegistry.RegisterAttachable(new Attachable(
             [](Attachable* thisptr) {},
             [](Attachable* thisptr, SafeCString&& msg) {
                 RF.GetDriver().send((uint8_t*) msg.raw_ptr(), strlen(msg.raw_ptr() + 1));
@@ -56,7 +56,7 @@ public:
             ProgmemUtils::ReadProgmemString(ServerDeviceStrings, 1),
             1,
             NextIndex++
-        ));
+        ));*/
     }
 };
 #endif

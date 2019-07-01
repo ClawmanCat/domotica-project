@@ -15,6 +15,6 @@ struct ArduinoClient : public IArduinoTarget<ArduinoClient> {
     }
 
     static void loop(void) {
-        RF.HandleClientRequest();
+        // Request is interrupt, no action neccesary.
     }
 };
